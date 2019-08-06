@@ -255,7 +255,8 @@ $testimony = getTestimony();
           <div class="col-md-4 wow fadeInUp">
             <div class="about-col">
               <div class="img">
-                <img src="<?php echo the_post_thumbnail_url() ?>" alt="" class="img-fluid">
+                  <div class="velo"></div>
+                  <img src="<?php echo the_post_thumbnail_url(array(360, 270)) ?>" alt="" class="img-fluid">
               </div>
               <div class="description">
                 <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
