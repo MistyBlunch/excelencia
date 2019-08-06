@@ -704,7 +704,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about {
   /* background: url("../img/about-bg.jpg") center top no-repeat fixed;
   background-size: cover; */
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   position: relative;
 }
 
@@ -1138,7 +1138,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #clients .event-list{
   list-style: none;
-  padding: 27px 5px;
+  padding: 10px 5px;
 }
 #clients .event{
   display: block;

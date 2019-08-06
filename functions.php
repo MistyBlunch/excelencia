@@ -117,6 +117,24 @@ add_action( 'wp_enqueue_scripts', 'excellence_scripts' );
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+function create_taxonomies_slider() {
+    register_taxonomy(
+        'category_slider',
+        'slider_reviews',
+        array(
+            'labels' => array(
+                'name' => 'Categoria de portada',
+                'add_new_item' => 'Agregar nueva categoria de portada',
+                'new_item_name' => "Nuevo tipo de categoria de portada"
+            ),
+            'show_ui' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => true
+        )
+    );
+}
+add_action( 'init', 'create_taxonomies_slider', 0 );
+
 /**
  * Registers the slider post type.
  */
@@ -148,11 +166,67 @@ function excellence_slider_post_type() {
         'has_archive'          => true,
         'menu_position'        => 30,
         'menu_icon'            => 'dashicons-images-alt2',
-        'taxonomies'          => array( 'category' ),
+        'taxonomies'          => array( 'category_slider' ),
     );
     register_post_type( 'slide', $args );
 }
 add_action( 'init', 'excellence_slider_post_type' );
+
+function create_taxonomies_events() {
+    register_taxonomy(
+        'category_event',
+        'event_reviews',
+        array(
+            'labels' => array(
+                'name' => 'Categoria Evento',
+                'add_new_item' => 'Agregar nueva categoria de evento',
+                'new_item_name' => "Nuevo tipo de categoria de evento"
+            ),
+            'show_ui' => true,
+            'show_tagcloud' => false,
+            'hierarchical' => true
+        )
+    );
+}
+add_action( 'init', 'create_taxonomies_events', 0 );
+
+/**
+ * Registers the slider post type.
+ */
+function excellence_events_post_type() {
+    $labels = array(
+        'name'               => __( 'Eventos' ),
+        'singular_name'      => __( 'Evento' ),
+        'add_new'            => __( 'Agregar evento' ),
+        'add_new_item'       => __( 'Agregar evento' ),
+        'edit_item'          => __( 'Editar evento' ),
+        'new_item'           => __( 'Agregar evento' ),
+        'view_item'          => __( 'Visualizar evento' ),
+        'search_items'       => __( 'Buscar evento' ),
+        'not_found'          => __( 'No se encontro evento' ),
+        'not_found_in_trash' => __( 'No se encontro evento en la papelera' )
+    );
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'revisions',
+    );
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'event' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-tickets',
+        'taxonomies'          => array( 'category_event' ),
+    );
+    register_post_type( 'event', $args );
+}
+add_action( 'init', 'excellence_events_post_type' );
+
 
 /**
  * Registers the slider post type.
@@ -249,6 +323,39 @@ function getTestimony(){
     }
     return  $post;
 }
+
+function getEvents(){
+    $args = array(
+        'post_type' => 'event',
+        'posts_per_page' => 6,
+        'orderby'=> 'rand'
+    );
+    $row = new WP_Query($args);
+    $data = $row->get_posts();
+    $post = null;
+    foreach ($data as $item){
+        $tmp['ID'] = $item->ID;
+        $tmp['post_author'] = $item->post_author;
+        $tmp['post_date'] = $item->post_date;
+        $tmp['post_title'] = $item->post_title;
+        $tmp['post_content'] = $item->post_content;
+        $tmp['post_type'] = $item->post_type;
+        $date = new DateTime(get_post_meta($item->ID,'date_event', true));
+        $tmp['event_day'] = $date->format('d');
+        $tmp['event_month'] = $date->format('M');
+        $tmp['event_year'] = $date->format('Y');
+        $tmp['post_event_date'] = $date->format('D, d M Y');
+        $tmp['post_event_place'] = get_post_meta($item->ID,'event_place', true);
+        $tmp['post_date_text'] = get_post_meta($item->ID,'date_in_text', true);
+        $tmp['post_url_landing'] = get_post_meta($item->ID,'url_landing_page', true);
+        $thumbID = get_post_thumbnail_id($item->ID);
+        $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
+        $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
+        $post[] = $tmp;
+    }
+    return  $post;
+}
+
 
 register_sidebar( array(
     'name'          => __( 'Widgets Escuelas', 'excellence' ),

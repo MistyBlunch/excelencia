@@ -5,6 +5,8 @@
 get_header();
 $sliders = getSlider();
 $testimony = getTestimony();
+$events = getEvents();
+
 ?>
 <!--==========================
   Intro Section
@@ -141,86 +143,24 @@ $testimony = getTestimony();
         </header>
 
         <ul class="owl-carousel clients-carousel">
+          <?php foreach ($events as $item){ ?>
           <li class="event-list">
             <div class="event">
                 <div class="date">
-                  <div class="day">01</div>
+                  <div class="day"><?php echo $item['event_day']; ?></div>
                   <div class="month">
-                    Ago
+                    <?php echo $item['event_month']; ?>
                   </div>
                 </div>
                 <div class="title">
-                  <h3>VI Congreso de trabajo social en Salud - Lima</h3>
+                  <h3><?php echo $item['post_title'] ?></h3>
                 </div>
                 <div class="more">
-                  <a href="#">Más información</a>
+                  <a href="<?php echo $item['post_url_landing'] ?>" target="_blank">Más información</a>
                 </div>
             </div>
           </li>
-          <li class="event-list">
-            <div class="event">
-                <div class="date">
-                  <div class="day">15</div>
-                  <div class="month">
-                    Set
-                  </div>
-                </div>
-                <div class="title">
-                  <h3>VI Congreso de trabajo social en Salud - Lima</h3>
-                </div>
-                <div class="more">
-                  <a href="#">Más información</a>
-                </div>
-            </div>
-          </li>
-          <li class="event-list">
-            <div class="event">
-                <div class="date">
-                  <div class="day">25</div>
-                  <div class="month">
-                    Oct
-                  </div>
-                </div>
-                <div class="title">
-                  <h3>VI Congreso de trabajo social en Salud - Lima</h3>
-                </div>
-                <div class="more">
-                  <a href="#">Más información</a>
-                </div>
-            </div>
-          </li>
-          <li class="event-list">
-            <div class="event">
-                <div class="date">
-                  <div class="day">21</div>
-                  <div class="month">
-                    Nov
-                  </div>
-                </div>
-                <div class="title">
-                  <h3>VI Congreso de trabajo social en Salud - Lima</h3>
-                </div>
-                <div class="more">
-                  <a href="#">Más información</a>
-                </div>
-            </div>
-          </li>
-          <li class="event-list">
-            <div class="event">
-                <div class="date">
-                  <div class="day">21</div>
-                  <div class="month">
-                    Nov
-                  </div>
-                </div>
-                <div class="title">
-                  <h3>VI Congreso de trabajo social en Salud - Lima</h3>
-                </div>
-                <div class="more">
-                  <a href="#">Más información</a>
-                </div>
-            </div>
-          </li>
+          <?php } ?>
         </ul>
 
       </div>
