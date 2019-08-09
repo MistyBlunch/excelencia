@@ -2,6 +2,11 @@
 
 <main id="main" class="site-main" role="main">
     <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <?php echo the_breadcrumbs(); ?>
+            </ol>
+        </nav>
     <?php
     while ( have_posts() ) : the_post();
 

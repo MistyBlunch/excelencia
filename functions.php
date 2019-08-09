@@ -283,6 +283,7 @@ function getSlider(){
         $tmp['post_description'] = $item->post_content;
         $tmp['post_name'] = $item->post_name;
         $tmp['post_type'] = $item->post_type;
+        $tmp['post_url_video'] = get_post_meta($item->ID,'url_video', true);
         $tmp['post_url'] = get_post_meta($item->ID,'link_botton', true);
         $tmp['post_btn'] = get_post_meta($item->ID,'text_button', true);
         $tmp['post_subtitle'] = get_post_meta($item->ID,'subtitle', true);
@@ -356,6 +357,27 @@ function getEvents(){
     return  $post;
 }
 
+function the_breadcrumbs() {
+    $html = null;
+    if (!is_front_page()) {
+        $html.= '<li class="breadcrumb-item"><a href="/">Inicio</a></li>';
+        if (is_category() || is_single() || is_page()) {
+            if(is_category()){
+                $category = get_the_category();
+                $html.= '<li class="breadcrumb-item active">'.$category[0]->cat_name.'</li>';
+            }else{
+                $html.= get_the_category_list(' - ');
+            }if(is_page()) {
+                $html.= '<li class="breadcrumb-item active">'.get_the_title().'</li>';
+            }if (is_single()) {
+                $html.= '<li class="breadcrumb-item active">'.get_the_title().'</li>';
+            }
+        }
+    }
+    return $html;
+}
+
+add_filter( 'init', 'the_breadcrumbs' );
 
 register_sidebar( array(
     'name'          => __( 'Widgets Escuelas', 'excellence' ),

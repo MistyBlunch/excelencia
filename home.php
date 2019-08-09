@@ -20,9 +20,18 @@ $events = getEvents();
         <div class="carousel-inner" role="listbox">
           <?php foreach ($sliders as $item){ ?>
           <div id="slider-<?php echo $item['ID'] ?>" class="carousel-item <?php echo $item['post_active'] ?>">
-            <div class="carousel-background">
+              <?php if(!$item['post_url_video']) {?>
+              <div class="carousel-background">
                 <img src="<?php echo $item['image_full'][0] ?>" alt="<?php echo $item['post_title'] ?>">
             </div>
+              <?php } else { ?>
+              <div class="carousel-video">
+                  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                      <source src="<?php echo $item['post_url_video'] ?>" type="video/mp4">
+                  </video>
+              </div>
+              <?php } ?>
+
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="subtitle"><?php echo $item['post_subtitle']; ?></h2>
@@ -66,9 +75,11 @@ $events = getEvents();
       Featured Services Section
     ============================-->
     <section id="featured-services">
+        <header class="section-header">
+            <h3>Áreas formativas</h3>
+        </header>
       <div class="text-center">
-          <h1 class="section-title">Áreas formativas</h1>
-          <h2 class="section-subtitle">Cursos, diplomados y congresos</h2>
+          <h4 class="section-subtitle">Cursos, diplomados y congresos</h4>
       </div>
       
       <div class="container">

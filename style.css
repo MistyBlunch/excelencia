@@ -14,7 +14,7 @@ Version: 2.0
 body {
   background: #fff;
   color: #666666;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Dosis', sans-serif;
 }
 
 a {
@@ -139,7 +139,7 @@ h6 {
 .header .menu-top{
   padding: 0;
   display: flex;
-  background: url("lib/vegas/overlays/07.png")
+  background: url("lib/vegas/overlays/07.png") #000000a1;
 }
 .header.header-scrolled {
   background: rgba(0, 0, 0, 0.9);
@@ -173,8 +173,27 @@ h6 {
   background-color: #000000;
 }
 .site-main{
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
+}
+.breadcrumb{
+  padding: .3rem 1rem;
+}
+.navbar-nav .dropdown-menu{
+  background-color: #000000;
+  border: none;
+  border-radius: 0;
+}
+.navbar-nav .dropdown-menu .dropdown-item{
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.navbar-nav .dropdown-menu .dropdown-item:hover{
+  background-color: #952331;
+}
+.navbar-nav .dropdown-menu .dropdown-item.active{
+  background-color: #952331;
 }
 .navbar-top{
   background-color: #000000;
@@ -197,6 +216,7 @@ h6 {
 .navbar-dark .navbar-nav .nav-link{
   font-size: 1rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 /*--------------------------------------------------------------
 # Intro Section
@@ -251,6 +271,20 @@ h6 {
 
 #intro .carousel-background img {
   max-width: 100%;
+}
+#intro .carousel-video video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 #intro .carousel-content {
@@ -330,10 +364,9 @@ h6 {
 #intro .btn-get-started {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+  font-size: 1.2rem;
   display: inline-block;
-  padding: 8px 32px;
+  padding: 8px 20px;
   border-radius: 10px;
   transition: 0.5s;
   color: #fff;
@@ -678,7 +711,38 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 24px;
   margin-bottom: 0;
 }
-
+.page-title{
+  position: relative;
+}
+.page-title h2{
+  font-size: 30px;
+  color: #952331;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+.page-title h2:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+.page-title h2:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #4f4f4f;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
 /* About Us Section
 --------------------------------*/
 
@@ -1144,8 +1208,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   background: #E5EAEC;
   border: 1px solid #CBD6DA;
-  padding: 27px 17px;
+  padding: 15px 10px;
   overflow: hidden;
+  height: 135px;
 }
 #clients .event .date {
   float: left;
@@ -1168,6 +1233,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #clients .event .title{
   overflow: hidden;
+  display: block;
+  height: 60px;
 }
 #clients .event .title h3{
   font-size: 15px;
@@ -1180,6 +1247,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #clients .event .more{
   margin-top: 1.5rem;
   text-align: right;
+  display: inline-block;
+  width: 100%;
 }
 #clients .event .more a{
   color: #004C97;
@@ -1594,7 +1663,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #18d26e;
+  color: #d29700;
 }
 
 #footer .footer-top .footer-contact {
