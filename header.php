@@ -11,7 +11,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
-    <title>Grupo Excelencia</title>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -42,9 +41,6 @@
           </li>
           <li class="nav-item">
               <a class="nav-link" href="#">Instituciones</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Sedes</a>
           </li>
       </ul>
       <ul class="navbar-nav ml-md-auto d-none d-md-flex">

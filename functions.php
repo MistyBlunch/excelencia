@@ -118,21 +118,24 @@ add_action( 'wp_enqueue_scripts', 'excellence_scripts' );
 require get_template_directory() . '/inc/template-tags.php';
 
 function create_taxonomies_slider() {
-    register_taxonomy(
-        'category_slider',
-        'slider_reviews',
-        array(
-            'labels' => array(
-                'name' => 'Categoria de portada',
-                'add_new_item' => 'Agregar nueva categoria de portada',
-                'new_item_name' => "Nuevo tipo de categoria de portada"
-            ),
-            'show_ui' => true,
-            'show_tagcloud' => false,
-            'hierarchical' => true
-        )
+
+    $labels = array(
+        'name' => 'Categoria de portada',
+        'add_new_item' => 'Agregar nueva categoria de portada',
+        'new_item_name' => "Nuevo tipo de categoria de portada"
     );
+
+    $args = array(
+        'labels' => $labels,
+        'show_ui' => true,
+        'hierarchical' => true,
+        'show_admin_column' => true,
+        'query_var' => true
+    );
+
+    register_taxonomy('category_slider', array('slide'),$args);
 }
+
 add_action( 'init', 'create_taxonomies_slider', 0 );
 
 /**
@@ -166,7 +169,7 @@ function excellence_slider_post_type() {
         'has_archive'          => true,
         'menu_position'        => 30,
         'menu_icon'            => 'dashicons-images-alt2',
-        'taxonomies'          => array( 'category_slider' ),
+
     );
     register_post_type( 'slide', $args );
 }
@@ -184,7 +187,8 @@ function create_taxonomies_events() {
             ),
             'show_ui' => true,
             'show_tagcloud' => false,
-            'hierarchical' => true
+            'hierarchical' => true,
+            'show_admin_column' => true,
         )
     );
 }
@@ -264,13 +268,20 @@ function excellence_testimony_post_type() {
 }
 add_action( 'init', 'excellence_testimony_post_type' );
 
-function getSlider(){
+function getSlider($terms){
     $args = array(
         'post_type' => 'slide',
         'posts_per_page' => 3,
+        'tax_query' => array( array(
+            'taxonomy' => 'category_slider',
+            'terms' => $terms,
+            'field' => 'slug'
+            )
+        ),
         'orderby'=> 'rand'
     );
     $row = new WP_Query($args);
+
     $data = $row->get_posts();
     $post = null;
     $counter = 0;
@@ -438,3 +449,7 @@ if ( ! function_exists( 'excellence_the_excerpt' ) ) :
     }
 
 endif;
+/**
+ * Include default theme options.
+ */
+require get_template_directory() . '/inc/customizer/default.php';

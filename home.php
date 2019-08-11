@@ -3,7 +3,7 @@
 //Template Name: Home Personas
 
 get_header();
-$sliders = getSlider();
+$sliders = getSlider('home');
 $testimony = getTestimony();
 $events = getEvents();
 
@@ -44,7 +44,7 @@ $events = getEvents();
                     if($item['post_btn']!=''){
                         echo $item['post_btn'];
                     } else {
-                        echo 'Más información';
+                        echo 'Más Información';
                     }
                     ?>
                 </a>
@@ -71,8 +71,9 @@ $events = getEvents();
 
   <main id="main">
 
+      <?php if (get_theme_mod('cd_display_area') == 1 ) { ?>
     <!--==========================
-      Featured Services Section
+      Areas Formativas
     ============================-->
     <section id="featured-services">
         <header class="section-header">
@@ -97,9 +98,11 @@ $events = getEvents();
         </div>
       </div>
     </section><!-- #featured-services -->
+      <?php } ?>
 
+      <?php if (get_theme_mod('cd_display_magazine') == 1 ) { ?>
     <!--==========================
-      Services Section
+      Area de revista
     ============================-->
     <section id="services">
         <div class="container">
@@ -136,15 +139,17 @@ $events = getEvents();
                 </div>
               </div>
             </div>
-            
-  
           </div>
   
         </div>
       </section><!-- #services -->
 
+      <?php } ?>
+
+      <?php if (get_theme_mod('cd_display_events') == 1 ) { ?>
+
       <!--==========================
-      Clients Section
+      Area de Eventos
     ============================-->
     <section id="clients" class="wow fadeInUp">
       <div class="container">
@@ -177,8 +182,11 @@ $events = getEvents();
       </div>
     </section><!-- #clients -->
 
+      <?php } ?>
+
+      <?php if (get_theme_mod('cd_display_notice') == 1 ) { ?>
     <!--==========================
-      About Us Section
+      Area de Noticias
     ============================-->
     <section id="about">
       <div class="container">
@@ -224,7 +232,9 @@ $events = getEvents();
 
       </div>
     </section><!-- #about -->
+    <?php } ?>
 
+      <?php if (get_theme_mod('cd_display_testimony') == 1 ) { ?>
     <!--==========================
       Clients Section
     ============================-->
@@ -274,8 +284,7 @@ $events = getEvents();
             </div>
           </div>
         </div>
-      <?php } ?>
-
+      <?php } }?>
     <!--==========================
       Team Section
     ============================-->

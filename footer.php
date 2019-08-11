@@ -52,19 +52,21 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-contact">
-                    <h4>Contáctanos</h4>
-                    <p>
-                        <strong>Teléfono:</strong> +1 480-0178<br>
-                        <strong>Email:</strong> informes@grupoexcelencia.org<br>
-                    </p>
+                    <?php if (get_theme_mod('cd_display_contact') == 1 ) { ?>
+                        <h4>Contáctanos</h4>
 
-                    <div class="social-links">
-                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                    </div>
+                        <p>
+                            <strong>Teléfono:</strong> <?php echo get_theme_mod('cd_phone_contact'); ?> <br>
+                            <strong>Email:</strong> <?php echo get_theme_mod('cd_text_contact'); ?><br>
+                        </p>
+
+                        <div class="social-links">
+                            <a href="<?php echo get_theme_mod('cd_facebook_contact'); ?>" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="<?php echo get_theme_mod('cd_linkedin_contact'); ?>" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a href="<?php echo get_theme_mod('cd_youtube_contact'); ?>" class="twitter"><i class="fa fa-youtube"></i></a>
+                        </div>
+
+                    <?php } ?>
 
                 </div>
 
