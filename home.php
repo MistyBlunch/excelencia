@@ -118,23 +118,9 @@ $events = getEvents();
               <div class="box-form">
                 <div class="card">
                   <div class="card-body">
-                    <h3>Solicita tu revista Excelencia ¡Es gratis!</h3>
-                      <form>
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="name"  placeholder="Nombres y apellidos">
-                        </div>
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="email" placeholder="Correo electrónico">
-                        </div>
-                        <div class="form-group">
-                          <input type="text" class="form-control" id="wathsapp" placeholder="Celular o Wathsapp">
-                        </div>
-                        <div class="form-group form-check">
-                          <input type="checkbox" class="form-check-input" id="autorize">
-                          <label class="form-check-label" for="autorize">Autorizo a Excelencia para enviarme los boletines de la revista virtual.</label>
-                        </div>
-                        <button type="submit" class="btn btn-block btn-primary">Solicitar la revista excelencia</button>
-                      </form>
+                      <?php if ( is_active_sidebar('home-form-magazine') ) : ?>
+                          <?php dynamic_sidebar('home-form-magazine'); ?>
+                      <?php endif; ?>
                   </div>
                 </div>
               </div>

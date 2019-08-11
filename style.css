@@ -139,7 +139,6 @@ h6 {
 .header .menu-top{
   padding: 0;
   display: flex;
-  background: url("lib/vegas/overlays/07.png") #000000a1;
 }
 .header.header-scrolled {
   background: rgba(0, 0, 0, 0.9);
@@ -180,7 +179,6 @@ h6 {
   padding: .3rem 1rem;
 }
 .navbar-nav .dropdown-menu{
-  background-color: #000000;
   border: none;
   border-radius: 0;
 }
@@ -206,6 +204,8 @@ h6 {
   color: #666666;
   font-size: 12px;
   text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .navbar-dark .navbar-nav .active .nav-link{
   color: #ffffff;

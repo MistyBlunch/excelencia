@@ -31,6 +31,7 @@
      $bgFooter = get_theme_mod('cd_footer_color_bg') ? get_theme_mod('cd_footer_color_bg') : '#3e3838';
      $textFooter = get_theme_mod('cd_footer_color_text') ? get_theme_mod('cd_footer_color_text') : '#FFFFFF';
      $bgNotice = get_theme_mod('cd_notice_color_bg') ? get_theme_mod('cd_notice_color_bg') : '#6b3c62';
+     $bgMenu = get_theme_mod('cd_menu_color') ? get_theme_mod('cd_menu_color') : '#000000';
      ?>
     .section-header h3{
         color: <?php echo $colorTextSection; ?>;
@@ -55,6 +56,18 @@
     }
     #about .about-col .velo{
         background: <?php echo $bgNotice; ?>;
+    }
+    .header .menu-top{
+        background: <?php echo $bgMenu; ?>cc;
+    }
+    .header.no-fixed .menu-top{
+        background-color: <?php echo $bgMenu; ?>;
+    }
+    .navbar-nav .dropdown-menu{
+        background-color: <?php echo $bgMenu; ?>;
+    }
+    .page-title h2{
+        color: <?php echo $colorTextSection; ?>;
     }
 </style>
 
