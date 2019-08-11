@@ -627,7 +627,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .section-header h3 {
   font-size: 25px;
-  color: #952331;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -666,12 +665,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Section with background
 --------------------------------*/
 
-.section-bg {
-  background: #952331;
-}
-.section-bg .section-header h3{
-  color: #fff;
-}
 
 /* Featured Services Section
 --------------------------------*/
@@ -1553,13 +1546,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer {
   background: #000;
-  padding: 0 0 30px 0;
-  color: #eee;
+  padding: 0 0 10px 0;
   font-size: 14px;
 }
 
 #footer .footer-top {
-  background: #3e3838;
   padding: 2rem 0;
 }
 
@@ -1583,14 +1574,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Montserrat", sans-serif;
-  color: #eee;
 }
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #333;
-  color: #eee;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1599,6 +1588,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 36px;
   height: 36px;
   transition: 0.3s;
+  color: #FFFFFF;
 }
 
 #footer .footer-top .social-links a:hover {
@@ -1609,7 +1599,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 #footer .footer-top h4 {
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 12px;
@@ -1658,10 +1647,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-top: 0;
 }
 
-#footer .footer-top .footer-links ul a {
-  color: #eee;
-}
-
 #footer .footer-top .footer-links ul a:hover {
   color: #d29700;
 }
@@ -1701,7 +1686,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 20px;
+  color: #FFFFFF;
 }
 
 #footer .credits {

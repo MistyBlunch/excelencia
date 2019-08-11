@@ -22,7 +22,41 @@
     <?php wp_head(); ?>
 </head>
 
+<style type="text/css">
+    <?php
 
+     $colorTextSection = get_theme_mod('cd_section_text_color') ? get_theme_mod('cd_section_text_color') : '#952331';
+     $bgTestimonySection = get_theme_mod('cd_testimony_color_bg') ? get_theme_mod('cd_testimony_color_bg') : '#952331';
+     $textTestimonySection = get_theme_mod('cd_testimony_color_text') ? get_theme_mod('cd_testimony_color_text') : '#FFFFFF';
+     $bgFooter = get_theme_mod('cd_footer_color_bg') ? get_theme_mod('cd_footer_color_bg') : '#3e3838';
+     $textFooter = get_theme_mod('cd_footer_color_text') ? get_theme_mod('cd_footer_color_text') : '#FFFFFF';
+     $bgNotice = get_theme_mod('cd_notice_color_bg') ? get_theme_mod('cd_notice_color_bg') : '#6b3c62';
+     ?>
+    .section-header h3{
+        color: <?php echo $colorTextSection; ?>;
+    }
+    .section-bg{
+        background: <?php echo $bgTestimonySection; ?>;
+    }
+    .section-bg .section-header h3{
+        color: <?php echo $textTestimonySection; ?>;
+    }
+    #footer .footer-top {
+        background: <?php echo $bgFooter; ?>;
+    }
+    #footer .footer-top .footer-links ul a {
+        color: <?php echo $textFooter; ?>;
+    }
+    #footer .footer-top h4{
+        color: <?php echo $textFooter; ?>;
+    }
+    #footer{
+        color: <?php echo $textFooter; ?>;
+    }
+    #about .about-col .velo{
+        background: <?php echo $bgNotice; ?>;
+    }
+</style>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
@@ -59,7 +93,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-dark">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <?php excellence_the_custom_logo(); ?>
+                    <?php excellence_the_custom_logo();  ?>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
