@@ -189,6 +189,17 @@ function excellence_customizer_settings($wp_customize) {
         'type' => 'checkbox',
     ) );
 
+    $wp_customize->add_setting( 'cd_campus_virtual' , array(
+        'default'     => '',
+        'transport'   => 'postMessage',
+    ) );
+
+
+    $wp_customize->add_control( 'cd_campus_virtual', array(
+        'label' => 'URL Campus Virtual',
+        'section'	=> 'cd_contact',
+        'type'	 => 'text',
+    ) );
 
     $wp_customize->add_setting( 'cd_text_contact' , array(
         'default'     => '',

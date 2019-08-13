@@ -218,6 +218,38 @@ h6 {
   font-weight: bold;
   text-transform: uppercase;
 }
+.menu-left .menu,
+.menu-right .menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu-left .menu li,
+.menu-right .menu li{
+  display: inline-block;
+}
+.menu-left .menu li a,
+.menu-right .menu li a{
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 10px 5px;
+}
+.menu-left .menu li.current-menu-item a,
+.menu-right .menu li.current-menu-item a
+{
+  color: #ffffff;
+}
+.btn-virtual{
+  text-transform: uppercase;
+}
+.phone-number{
+  display: inline-block;
+  padding: 0 2rem;
+  color:#ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/

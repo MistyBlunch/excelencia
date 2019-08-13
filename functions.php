@@ -225,6 +225,14 @@ if ( ! function_exists( 'excellence_setup' ) ) :
         ) );
 
         register_nav_menus( array(
+            'header-left' => esc_html__( 'Header Left', 'excellence' ),
+        ) );
+
+        register_nav_menus( array(
+            'header-right' => esc_html__( 'Header Right', 'excellence' ),
+        ) );
+
+        register_nav_menus( array(
             'footer-about' => esc_html__( 'Nosotros', 'excellence' ),
         ) );
 

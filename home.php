@@ -178,7 +178,7 @@ $events = getEvents();
       <div class="container">
 
         <header class="section-header">
-          <h3>Noticias</h3>
+          <h3>Noticias y publicaciones</h3>
         </header>
 
         <div class="row about-cols">

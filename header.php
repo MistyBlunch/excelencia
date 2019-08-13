@@ -82,25 +82,33 @@
     <header id="header" class="header no-fixed">
 <?php endif; ?>
     <nav class="navbar navbar-expand-md navbar-top">
-      <ul class="navbar-nav d-none d-md-flex">
-          <li class="nav-item active">
-              <a class="nav-link" href="#">Personas</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Instituciones</a>
-          </li>
-      </ul>
-      <ul class="navbar-nav ml-md-auto d-none d-md-flex">
-          <li class="nav-item">
-              <a class="nav-link" href="#">Publicaciones</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Noticias</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Bolsa de trabajo</a>
-          </li>
-      </ul>
+
+          <?php if ( has_nav_menu( 'header-left' ) ) : ?>
+              <?php
+              wp_nav_menu(
+                  array(
+                      'theme_location' => 'header-left',
+                      'container_class' => 'd-md-flex menu-left',
+                      'menu_class' => 'menu',
+                  )
+              );
+              ?>
+          <?php endif; ?>
+
+        <?php if ( has_nav_menu( 'header-right' ) ) : ?>
+            <?php
+            wp_nav_menu(
+                array(
+                    'theme_location' => 'header-right',
+                    'container_class' => 'ml-md-auto menu-right',
+                    'menu_class' => 'menu',
+                )
+            );
+            ?>
+        <?php endif; ?>
+
+
+
     </nav>
     <div class="menu-top">
         <div class="container-fluid">
@@ -132,6 +140,19 @@
 
                 <?php endif; ?>
 
+                <?php if(get_theme_mod('cd_phone_contact')) { ?>
+                    <div class="phone-number">
+                        <?php echo get_theme_mod('cd_phone_contact'); ?>
+                    </div>
+
+                <?php } ?>
+
+                <?php if(get_theme_mod('cd_campus_virtual')) { ?>
+                    <a class="btn btn-primary btn-virtual" href="<?php echo get_theme_mod('cd_campus_virtual'); ?>" target="_blank" >
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                        Aula Virtual
+                    </a>
+                <?php } ?>
 
             </nav>
 
