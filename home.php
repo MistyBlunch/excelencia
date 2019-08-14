@@ -75,7 +75,7 @@ $events = getEvents();
     <!--==========================
       Areas Formativas
     ============================-->
-    <section id="featured-services">
+    <section id="featured-services" class="wow fadeInUp">
         <header class="section-header">
             <h3>Áreas formativas</h3>
         </header>
@@ -181,40 +181,52 @@ $events = getEvents();
           <h3>Noticias y publicaciones</h3>
         </header>
 
-        <div class="row about-cols">
+          <!-- Noticias tipo BCP -->
 
-            <?php
-            $args = array (
+          <div class="list-notice wow fadeInUp">
+              <div class="row">
+          <?php
+              $args = array (
 
-                'posts_per_page' =>6,
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'paged' => 1,
-            );
+                  'posts_per_page' =>6,
+                  'post_type' => 'post',
+                  'post_status' => 'publish',
+                  'paged' => 1,
+              );
 
-            $loop = new WP_Query($args);
-            if ( $loop->have_posts() ) :
-            $i=-1;
-            while ($loop->have_posts()) : $loop->the_post(); $i++;?>
+              $loop = new WP_Query($args);
+              if ( $loop->have_posts() ) :
+                  $i=0;
+                while ($loop->have_posts()) : $loop->the_post();
+                $i++;
+                $classColumn = 'box-type-1 col-sm-5 col-sm-offset-1';
+                $boxClass = 'bcp-box-1';
+                if($i%2==0){
+                    $classColumn = 'box-type-2 col-sm-7';
+                    $boxClass = 'bcp-box-2';
+                }
+              ?>
+                  <div class="<?php echo $classColumn; ?>">
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="about-col">
-              <div class="img">
-                  <div class="velo"></div>
-                  <img src="<?php echo the_post_thumbnail_url(array(360, 270)) ?>" alt="" class="img-fluid">
+                        <div class="box-notice <?php echo $boxClass ?>" style="background-image: url(<?php echo the_post_thumbnail_url(array(360, 270)) ?>)">
+                            <div class="image"></div>
+                            <div class="description">
+                                <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+                                <?php
+                                $excerpt = excellence_the_excerpt( 20 );
+                                echo wp_kses_post( wpautop( $excerpt ) );
+                                ?>
+                            </div>
+                        </div>
+
+                  </div>
+
+              <?php endwhile; wp_reset_postdata(); endif; ?>
+
               </div>
-              <div class="description">
-                <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-                <?php
-                $excerpt = excellence_the_excerpt( 20 );
-                echo wp_kses_post( wpautop( $excerpt ) );
-                ?>
-              </div>
-            </div>
           </div>
-        <?php endwhile; wp_reset_postdata(); endif; ?>
 
-        </div>
+          <!-- Fin de bloque -->
 
       </div>
     </section><!-- #about -->

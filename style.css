@@ -409,7 +409,28 @@ h6 {
   background: #5d2063;
   color: #ffffff;
 }
-
+div.wpforms-container-full .wpforms-form input.wpforms-field-medium{
+  width: 100% !important;
+  max-width: 100% !important;
+  display: inline-block;
+}
+div.wpforms-container-full .wpforms-form .wpforms-field{
+  padding: 5px 0 !important;
+}
+div.wpforms-container-full .wpforms-form button[type=submit] {
+  display: inline-block;
+  width: 100%;
+  background-color: #ff6600 !important;
+  border-color: #ff6600 !important;
+  font-weight: bold;
+  font-size: 1.2rem !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+}
+div.wpforms-container-full .wpforms-form button[type=submit]:hover{
+  background-color: #ff5100 !important;
+  border-color: #ff5100 !important;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -531,112 +552,60 @@ h6 {
   margin: 0;
 }
 
-/* Mobile Nav Toggle */
-
-#mobile-nav-toggle {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 999;
-  margin: 20px 20px 0 0;
-  border: 0;
-  background: none;
-  font-size: 24px;
-  display: none;
-  transition: all 0.4s;
-  outline: none;
-  cursor: pointer;
-}
-
-#mobile-nav-toggle i {
-  color: #fff;
-}
-
-/* Mobile Nav Styling */
-
-#mobile-nav {
-  position: fixed;
-  top: 0;
-  padding-top: 18px;
-  bottom: 0;
-  z-index: 998;
-  background: rgba(0, 0, 0, 0.8);
-  left: -260px;
-  width: 260px;
-  overflow-y: auto;
-  transition: 0.4s;
-}
-
-#mobile-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#mobile-nav ul li {
-  position: relative;
-}
-
-#mobile-nav ul li a {
-  color: #fff;
-  font-size: 13px;
-  text-transform: uppercase;
+/* Noticias */
+.box-notice {
+  margin-bottom: 15px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover!important;
   overflow: hidden;
-  padding: 10px 22px 10px 15px;
   position: relative;
-  text-decoration: none;
-  width: 100%;
+}
+.box-notice:before {
+  content: "";
   display: block;
-  outline: none;
-  font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  padding-top: 70%;
 }
-
-#mobile-nav ul li a:hover {
-  color: #18d26e;
+.bcp-box-2:before {
+  padding-top: calc(50% - 7.5px);
 }
-
-#mobile-nav ul li li {
-  padding-left: 30px;
+.box-notice .image{
+  opacity: .7;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
 }
-
-#mobile-nav ul li.menu-active a {
-  color: #18d26e;
+.box-notice .description{
+  padding: 24px;
+  transform: scale(1) translateY(-75%);
+  -webkit-transform: scale(1) translateY(-75%);
 }
-
-#mobile-nav ul .menu-has-children i {
+.box-notice .image, .box-notice .description{
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
   position: absolute;
-  right: 0;
-  z-index: 99;
-  padding: 15px;
-  cursor: pointer;
-  color: #fff;
-}
-
-#mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #18d26e;
-}
-
-#mobile-nav ul .menu-has-children li a {
-  text-transform: none;
-}
-
-#mobile-nav ul .menu-item-active {
-  color: #18d26e;
-}
-
-#mobile-body-overly {
   width: 100%;
-  height: 100%;
-  z-index: 997;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
+  height: 70%;
 }
-
-/* Mobile Nav body classes */
+.box-notice .description h2{
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0;
+  margin: 5px 0 12px 0;
+}
+.box-notice .description p{
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFF;
+  padding: 0;
+}
+.box-notice .description h2 a{
+  color: #FFF;
+  font-weight: normal;
+}
+/* Fin noticias */
 
 body.mobile-nav-active {
   overflow: hidden;
@@ -901,17 +870,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 12px;
   color: #fff;
 }
-#services .btn-primary{
-  padding: .8rem 0;
-  background-color: #ff6600;
-  border-color: #ff6600;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-#services .btn-primary:hover{
-  background-color: #ff5100;
-  border-color: #ff5100;
-}
+
 #services .icon {
   float: left;
 }
@@ -1847,7 +1806,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: inline-block;
   }
   .areas li.box{
-    width: 50%;
+    width: 45%;
     float: left;
+    margin: auto 8px;
+  }
+  .box-notice:before{
+    padding-top: 80%;
+  }
+  .bcp-box-2:before{
+    padding-top: 80%;
   }
 }

@@ -54,7 +54,7 @@
     #footer{
         color: <?php echo $textFooter; ?>;
     }
-    #about .about-col .velo{
+    .box-notice .image{
         background: <?php echo $bgNotice; ?>;
     }
     .header .menu-top{
@@ -142,6 +142,7 @@
 
                 <?php if(get_theme_mod('cd_phone_contact')) { ?>
                     <div class="phone-number">
+                        <img src="<?php echo get_theme_mod('cd_country'); ?>" width="32px" />
                         <?php echo get_theme_mod('cd_phone_contact'); ?>
                     </div>
 
