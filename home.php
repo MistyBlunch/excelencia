@@ -208,7 +208,7 @@ $events = getEvents();
               ?>
                   <div class="<?php echo $classColumn; ?>">
 
-                        <div class="box-notice <?php echo $boxClass ?>" style="background-image: url(<?php echo the_post_thumbnail_url(array(360, 270)) ?>)">
+                        <div class="box-notice <?php echo $boxClass ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>)">
                             <div class="image"></div>
                             <div class="description">
                                 <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
