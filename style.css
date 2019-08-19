@@ -71,6 +71,15 @@ h6 {
   color: #fff;
 }
 
+.navbar{
+  padding: .5rem 0rem;
+}
+
+.navbar-expand-md .navbar-nav .nav-link{
+  padding-right: 0;
+  padding-left: 0;
+}
+
 /* Prelaoder */
 
 #preloader {
