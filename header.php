@@ -58,7 +58,7 @@
         background: <?php echo $bgNotice; ?>;
     }
     .header .menu-top{
-        background: <?php echo $bgMenu; ?>cc;
+        background: <?php echo $bgMenu; ?>;
     }
     .header.no-fixed .menu-top{
         background-color: <?php echo $bgMenu; ?>;
@@ -79,7 +79,7 @@
 <?php if ( is_front_page()) : ?>
     <header id="header" class="header">
 <?php else : ?>
-    <header id="header" class="header no-fixed">
+    <header id="header" class="header">
 <?php endif; ?>
     <nav class="navbar navbar-expand-md navbar-top">
 

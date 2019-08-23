@@ -172,7 +172,7 @@ h6 {
   background-color: #000000;
 }
 .site-main{
-  padding-top: 1rem;
+  padding-top: 9rem;
   padding-bottom: 2rem;
 }
 .breadcrumb{
@@ -1815,5 +1815,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   .bcp-box-2:before{
     padding-top: 80%;
+  }
+  .site-main{
+    padding-top: 13rem;
   }
 }

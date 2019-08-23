@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Nuestas escuelas</h4>
+                    <h4>Nuestras escuelas</h4>
                     <?php if ( has_nav_menu( 'footer-school' ) ) : ?>
                         <?php
                         wp_nav_menu(
@@ -61,9 +61,9 @@
                         </p>
 
                         <div class="social-links">
-                            <a href="<?php echo get_theme_mod('cd_facebook_contact'); ?>" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="<?php echo get_theme_mod('cd_linkedin_contact'); ?>" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                            <a href="<?php echo get_theme_mod('cd_youtube_contact'); ?>" class="twitter"><i class="fa fa-youtube"></i></a>
+                            <a target="_blank" href="<?php echo get_theme_mod('cd_facebook_contact'); ?>" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a target="_blank" href="<?php echo get_theme_mod('cd_linkedin_contact'); ?>" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                            <a target="_blank" href="<?php echo get_theme_mod('cd_youtube_contact'); ?>" class="twitter"><i class="fa fa-youtube"></i></a>
                         </div>
 
                     <?php } ?>
