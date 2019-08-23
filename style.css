@@ -1548,6 +1548,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #000;
   padding: 0 0 10px 0;
   font-size: 14px;
+  font-family: Arial, sans-serif;
 }
 
 #footer .footer-top {
