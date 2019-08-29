@@ -64,6 +64,12 @@
                             <a target="_blank" href="<?php echo get_theme_mod('cd_facebook_contact'); ?>" class="facebook"><i class="fa fa-facebook"></i></a>
                             <a target="_blank" href="<?php echo get_theme_mod('cd_linkedin_contact'); ?>" class="linkedin"><i class="fa fa-linkedin"></i></a>
                             <a target="_blank" href="<?php echo get_theme_mod('cd_youtube_contact'); ?>" class="twitter"><i class="fa fa-youtube"></i></a>
+                            <a target="_blank" href="<?php echo get_theme_mod('cd_book_claims'); ?>" class="book">
+                                <img src="<?php echo get_template_directory_uri() ?>/img/libro_reclama.png" />
+                            </a>
+                            <a target="_blank" href="<?php echo get_theme_mod('cd_campus_virtual'); ?>" class="book">
+                                <img src="<?php echo get_template_directory_uri() ?>/img/aula_virtual.png" />
+                            </a>
                         </div>
 
                     <?php } ?>

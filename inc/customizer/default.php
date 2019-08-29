@@ -211,6 +211,17 @@ function excellence_customizer_settings($wp_customize) {
         'type'	 => 'text',
     ) );
 
+    $wp_customize->add_setting( 'cd_book_claims' , array(
+        'default'     => '',
+        'transport'   => 'postMessage',
+    ) );
+
+    $wp_customize->add_control( 'cd_book_claims', array(
+        'label' => 'URL Libro Reclamaciones',
+        'section'	=> 'cd_contact',
+        'type'	 => 'text',
+    ) );
+
     $wp_customize->add_setting( 'cd_text_contact' , array(
         'default'     => '',
         'transport'   => 'postMessage',

@@ -14,7 +14,7 @@ Version: 2.0
 body {
   background: #fff;
   color: #666666;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 a {
@@ -156,24 +156,12 @@ h6 {
   transition: all 0.5s;
 }
 
-.header #logo {
+.header .custom-logo {
   float: left;
+  width: 180px;
+  height: auto;
 }
 
-.header #logo h1 {
-  font-size: 34px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
-.header #logo img {
-  padding: 0;
-  margin: 0;
-}
 .header.no-fixed{
   position: inherit;
 }
@@ -223,7 +211,7 @@ h6 {
   padding: 0 10px;
 }
 .navbar-dark .navbar-nav .nav-link{
-  font-size: 1rem;
+  font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -251,13 +239,14 @@ h6 {
 }
 .btn-virtual{
   text-transform: uppercase;
+  font-size: 14px;
 }
 .phone-number{
   display: inline-block;
   padding: 0 2rem;
   color:#ffffff;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, sans-serif;
 }
 /*--------------------------------------------------------------
@@ -267,13 +256,13 @@ h6 {
 #intro {
   display: table;
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   background: #000;
 }
 
 #intro .carousel-item {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1579,7 +1568,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #footer .footer-top .social-links a {
-  font-size: 18px;
+  font-size: 14px;
   display: inline-block;
   background: #333;
   line-height: 1;
@@ -1587,12 +1576,22 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-right: 4px;
   border-radius: 50%;
   text-align: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   transition: 0.3s;
   color: #FFFFFF;
 }
-
+#footer .footer-top .social-links a.book{
+  border-radius: inherit;
+  background: transparent;
+  width: auto;
+}
+#footer .footer-top .social-links a.book img{
+  width: 60px;
+}
+#footer .footer-top .social-links a.book:hover{
+  background: transparent;
+}
 #footer .footer-top .social-links a:hover {
   background: #FF5722;
   color: #fff;
