@@ -70,7 +70,10 @@ h6 {
   padding-top: 12px;
   color: #fff;
 }
-
+.header-top{
+  background-color: #000000;
+  border-bottom: 2px solid #800000;
+}
 .navbar{
   padding: .5rem 0rem;
 }
@@ -191,8 +194,7 @@ h6 {
   background-color: #952331;
 }
 .navbar-top{
-  background-color: #000000;
-  border-bottom: 2px solid #800000;
+
 }
 .navbar-top .active .nav-link{
   color: #ffffff;
@@ -208,10 +210,10 @@ h6 {
   color: #ffffff;
 }
 .navbar-dark .navbar-nav .nav-item{
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .navbar-dark .navbar-nav .nav-link{
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -239,14 +241,15 @@ h6 {
 }
 .btn-virtual{
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
 }
 .phone-number{
   display: inline-block;
   padding: 0 2rem;
   color:#ffffff;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Arial, sans-serif;
 }
 /*--------------------------------------------------------------
@@ -1704,6 +1707,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
+@media (min-width: 1200px)
+  .container {
+    max-width: 1271px;
+  }
 
 @media (min-width: 768px) {
   #contact .contact-address,

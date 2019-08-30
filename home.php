@@ -18,6 +18,7 @@ $events = getEvents();
         <ol class="carousel-indicators"></ol>
 
         <div class="carousel-inner" role="listbox">
+
           <?php foreach ($sliders as $item){ ?>
           <div id="slider-<?php echo $item['ID'] ?>" class="carousel-item <?php echo $item['post_active'] ?>">
               <?php if(!$item['post_url_video']) {?>
@@ -33,22 +34,25 @@ $events = getEvents();
               <?php } ?>
 
             <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="subtitle"><?php echo $item['post_subtitle']; ?></h2>
-                <h1 class="title"><?php echo $item['post_title']; ?></h1>
-                <div class="description">
-                    <p><?php echo $item['post_description']; ?></p>
+                <div class="container">
+                    <div class="carousel-content">
+                        <h2 class="subtitle"><?php echo $item['post_subtitle']; ?></h2>
+                        <h1 class="title"><?php echo $item['post_title']; ?></h1>
+                        <div class="description">
+                            <p><?php echo $item['post_description']; ?></p>
+                        </div>
+                        <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto">
+                            <?php
+                            if($item['post_btn']!=''){
+                                echo $item['post_btn'];
+                            } else {
+                                echo 'Más Información';
+                            }
+                            ?>
+                        </a>
+                    </div>
                 </div>
-                <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto">
-                    <?php
-                    if($item['post_btn']!=''){
-                        echo $item['post_btn'];
-                    } else {
-                        echo 'Más Información';
-                    }
-                    ?>
-                </a>
-              </div>
+
             </div>
           </div>
           <?php } ?>

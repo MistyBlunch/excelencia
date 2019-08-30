@@ -81,40 +81,47 @@
 <?php else : ?>
     <header id="header" class="header">
 <?php endif; ?>
-    <nav class="navbar navbar-expand-md navbar-top">
+    <div class="header-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-top">
 
-          <?php if ( has_nav_menu( 'header-left' ) ) : ?>
-              <?php
-              wp_nav_menu(
-                  array(
-                      'theme_location' => 'header-left',
-                      'container_class' => 'd-md-flex menu-left',
-                      'menu_class' => 'menu',
-                  )
-              );
-              ?>
-          <?php endif; ?>
+                <?php if ( has_nav_menu( 'header-left' ) ) : ?>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'header-left',
+                            'container_class' => 'd-md-flex menu-left',
+                            'menu_class' => 'menu',
+                        )
+                    );
+                    ?>
+                <?php endif; ?>
 
-        <?php if ( has_nav_menu( 'header-right' ) ) : ?>
-            <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'header-right',
-                    'container_class' => 'ml-md-auto menu-right',
-                    'menu_class' => 'menu',
-                )
-            );
-            ?>
-        <?php endif; ?>
+                <?php if ( has_nav_menu( 'header-right' ) ) : ?>
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'header-right',
+                            'container_class' => 'ml-md-auto menu-right',
+                            'menu_class' => 'menu',
+                        )
+                    );
+                    ?>
+                <?php endif; ?>
+            </nav>
+        </div>
+    </div>
 
 
-
-    </nav>
     <div class="menu-top">
-        <div class="container-fluid">
+        <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark">
                 <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <?php excellence_the_custom_logo();  ?>
+                    <?php
+                    $custom_logo_id = get_theme_mod( 'custom_logo' );
+                    $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                    ?>
+                    <img width="180px" src="<?php  echo $image[0]; ?>"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
