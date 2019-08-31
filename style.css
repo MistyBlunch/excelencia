@@ -1880,4 +1880,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   #services .magazine{
     display: none;
   }
+  .navbar-dark .navbar-nav .nav-item {
+    padding: 0.2rem 5px;
+    border-bottom: 1px solid #FFF;
+  }
+  .navbar-dark .navbar-nav .nav-item:last-child{
+    border-bottom: none;
+  }
 }
