@@ -1871,4 +1871,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   .box-notice .description h2{
     font-size: 16px;
   }
+  .box-notice .image{
+    top: 35%;
+  }
+  .box-notice .image, .box-notice .description{
+    height: 95%;
+  }
 }
