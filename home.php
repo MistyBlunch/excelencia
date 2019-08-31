@@ -41,15 +41,17 @@ $events = getEvents();
                         <div class="description">
                             <p><?php echo $item['post_description']; ?></p>
                         </div>
-                        <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto">
-                            <?php
-                            if($item['post_btn']!=''){
-                                echo $item['post_btn'];
-                            } else {
-                                echo 'Más Información';
-                            }
-                            ?>
-                        </a>
+                        <div class="link-action">
+                            <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto">
+                                <?php
+                                if($item['post_btn']!=''){
+                                    echo $item['post_btn'];
+                                } else {
+                                    echo 'Más Información';
+                                }
+                                ?>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
