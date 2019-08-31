@@ -1877,4 +1877,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   .box-notice .image, .box-notice .description{
     height: 95%;
   }
+  #services .magazine{
+    display: none;
+  }
 }
