@@ -600,7 +600,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
 }
 .box-notice .description h2{
   text-align: left;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 18px;
   padding: 0;
   margin: 5px 0 12px 0;
@@ -613,7 +613,6 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
 }
 .box-notice .description h2 a{
   color: #FFF;
-  font-weight: normal;
 }
 /* Fin noticias */
 
@@ -1863,5 +1862,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   #footer .copyright{
     font-size: 12px;
+  }
+  .box-notice .description p {
+    font-size: 12px;
+    line-height: 16px;
+    color: #9E9E9E;
+  }
+  .box-notice .description h2{
+    font-size: 16px;
   }
 }
