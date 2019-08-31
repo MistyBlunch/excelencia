@@ -83,10 +83,10 @@ $events = getEvents();
     ============================-->
     <section id="featured-services" class="wow fadeInUp">
         <header class="section-header">
-            <h3>Áreas formativas</h3>
+            <h3>Capacitación empresarial</h3>
         </header>
       <div class="text-center">
-          <h4 class="section-subtitle">Cursos, diplomados y congresos</h4>
+          <h4 class="section-subtitle">Tenemos los mejores cursos y seminarios in houses</h4>
       </div>
       
       <div class="container">
