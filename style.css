@@ -882,7 +882,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
 div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
-  font-size: 12px;
+  font-size: 12px !important;
 }
 #services .icon {
   float: left;
