@@ -606,8 +606,8 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   margin: 5px 0 12px 0;
 }
 .box-notice .description p{
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
   color: #FFF;
   padding: 0;
 }
