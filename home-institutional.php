@@ -114,9 +114,9 @@ $events = getEvents();
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-              <div class="magazine">
-                  <?php if ( is_active_sidebar('home-magazine') ) : ?>
-                      <?php dynamic_sidebar('home-magazine'); ?>
+              <div class="magazine institution">
+                  <?php if ( is_active_sidebar('home-magazine-institution') ) : ?>
+                      <?php dynamic_sidebar('home-magazine-institution'); ?>
                   <?php endif; ?>
               </div>
             </div>
@@ -124,8 +124,8 @@ $events = getEvents();
               <div class="box-form">
                 <div class="card">
                   <div class="card-body">
-                      <?php if ( is_active_sidebar('home-form-magazine') ) : ?>
-                          <?php dynamic_sidebar('home-form-magazine'); ?>
+                      <?php if ( is_active_sidebar('home-form-magazine-institution') ) : ?>
+                          <?php dynamic_sidebar('home-form-magazine-institution'); ?>
                       <?php endif; ?>
                   </div>
                 </div>

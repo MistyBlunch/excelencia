@@ -593,7 +593,7 @@ register_sidebar( array(
 ) );
 
 register_sidebar( array(
-    'name'          => __( 'Widgets Revista', 'excellence' ),
+    'name'          => __( 'Widgets Revista Persona', 'excellence' ),
     'id'            => 'home-magazine',
     'description'   => 'Texto de la sección revista',
     'before_widget' => '<div id="home-%1$s" class="widget box-img %2$s">',
@@ -603,8 +603,28 @@ register_sidebar( array(
 ) );
 
 register_sidebar( array(
-    'name'          => __( 'Formulario Contacto', 'excellence' ),
+    'name'          => __( 'Widgets Revista Institución', 'excellence' ),
+    'id'            => 'home-magazine-institution',
+    'description'   => 'Texto de la sección revista',
+    'before_widget' => '<div id="home-%1$s" class="widget box-img %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3 class="title-section">',
+    'after_title'   => '</h3>',
+) );
+
+register_sidebar( array(
+    'name'          => __( 'Formulario Contacto Persona', 'excellence' ),
     'id'            => 'home-form-magazine',
+    'description'   => 'Añade un formulario en la sección revista',
+    'before_widget' => '<div id="home-%1$s" class="widget box-form %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3 class="title-section">',
+    'after_title'   => '</h3>',
+) );
+
+register_sidebar( array(
+    'name'          => __( 'Formulario Contacto Institución', 'excellence' ),
+    'id'            => 'home-form-magazine-institution',
     'description'   => 'Añade un formulario en la sección revista',
     'before_widget' => '<div id="home-%1$s" class="widget box-form %2$s">',
     'after_widget'  => '</div>',
