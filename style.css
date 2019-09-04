@@ -881,7 +881,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
   font-size: 27px;
   margin-bottom: 10px;
-  padding-right: 20px;
+  padding-right: 50px;
 }
 #services .box-form .form-check-label{
   font-size: 12px;
