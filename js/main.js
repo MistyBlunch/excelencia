@@ -99,6 +99,13 @@
     }
   });
 
+    $('.modal-video').on('hidden.bs.modal', function() {
+        var $this = $(this).find('iframe'),
+            tempSrc = $this.attr('src');
+        $this.attr('src', "");
+        $this.attr('src', tempSrc);
+    });
+
   $('.nav-item.dropdown').hover(function () {
       $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
   }, function () {
