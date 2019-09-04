@@ -535,8 +535,7 @@ function orderDate($a, $b){
 function getEvents(){
     $args = array(
         'post_type' => 'event',
-        'posts_per_page' => 6,
-        'orderby'=> 'rand'
+        'posts_per_page' => 6
     );
     $row = new WP_Query($args);
     $data = $row->get_posts();
@@ -565,8 +564,9 @@ function getEvents(){
 
 
     usort($post, function($a, $b) {
-        return $a['date'] - $b['date'];
+        return $a['date'] > $b['date'];
     });
+
 
 
     return  $post;
