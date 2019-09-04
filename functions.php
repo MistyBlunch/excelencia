@@ -527,6 +527,11 @@ function getTestimony(){
     return  $post;
 }
 
+function orderDate($a, $b){
+    return strtotime($a['date_event'] - $b['date_event']);
+}
+
+
 function getEvents(){
     $args = array(
         'post_type' => 'event',
@@ -548,6 +553,7 @@ function getEvents(){
         $tmp['event_month'] = $date->format('M');
         $tmp['event_year'] = $date->format('Y');
         $tmp['post_event_date'] = $date->format('D, d M Y');
+        $tmp['date_event'] = $date->format('d-m-Y');
         $tmp['post_event_place'] = get_post_meta($item->ID,'event_place', true);
         $tmp['post_date_text'] = get_post_meta($item->ID,'date_in_text', true);
         $tmp['post_url_landing'] = get_post_meta($item->ID,'url_landing_page', true);
@@ -556,8 +562,18 @@ function getEvents(){
         $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
         $post[] = $tmp;
     }
+
+
+    usort($post, function($a, $b) {
+        return $a['date'] - $b['date'];
+    });
+
+
     return  $post;
 }
+
+
+
 
 function the_breadcrumbs() {
     $html = null;
