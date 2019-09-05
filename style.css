@@ -931,6 +931,9 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   font-size: 14px;
   text-transform: uppercase;
 }
+.list-notice .wp-post-image{
+  border-radius: 10px;
+}
 .list-notice .post-header .post-title{
   line-height: 1.5;
   padding: 0;
@@ -952,6 +955,10 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   margin: 1rem 0 1rem 0;
   padding: 1rem 0 1rem 0;
   border-bottom: 1px solid #cdcdcd;
+}
+.list-notice .not-publications{
+  font-size: 14px;
+  padding: 0 1rem 0 1rem;
 }
 /* Call To Action Section
 --------------------------------*/
