@@ -251,133 +251,48 @@ $events = getEvents();
 
         <div class="owl-carousel testimonials-carousel">
             <?php foreach ($testimony as $item){ ?>
-              <div class="testimonial-item">
-                <div id="video-<?php echo $item['ID'] ?>" class="video-item" data-toggle="modal" data-target="#modal-video-<?php echo $item['ID'] ?>">
-                  <div class="video">
-                    <div class="velo"></div>
-                      <img src="<?php echo $item['image_full'][0] ?>" class="img-fluid" alt="<?php echo $item['post_title'] ?>">
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                  </div>
-                  <div class="video-content">
-                    <p class="name"><?php echo $item['post_title'] ?></p>
-                    <p class="description"><?php echo $item['post_description'] ?></p>
-                  </div>
+                <div class="testimonial-item">
+                    <div id="video-<?php echo $item['ID'] ?>" class="video-item" data-title="<?php echo $item['post_title'] ?> - <?php echo $item['post_description'] ?>"
+                         data-toggle="modal" data-src="<?php echo $item['url_video'] ?>"
+                         data-target="#modal-video">
+                        <div class="video">
+                            <div class="velo"></div>
+                            <img src="<?php echo $item['image_full'][0] ?>" class="img-fluid" alt="<?php echo $item['post_title'] ?>">
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </div>
+                        <div class="video-content">
+                            <p class="name"><?php echo $item['post_title'] ?></p>
+                            <p class="description"><?php echo $item['post_description'] ?></p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             <?php } ?>
 
         </div>
 
       </div>
     </section><!-- #testimonials -->
-      <?php foreach ($testimony as $item){ ?>
-        <div class="modal fade" id="modal-video-<?php echo $item['ID'] ?>" tabindex="-1" role="dialog" aria-labelledby="modal-label-<?php echo $item['ID'] ?>" aria-hidden="true">
+
+
+      <div class="modal fade modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modal-label-<?php echo $item['ID'] ?>"><?php echo $item['post_title'] ?></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <div class="embed-responsive embed-responsive-16by9">
-                  <?php echo $item['post_content'] ?>
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modal-label"></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                      </div>
                   </div>
               </div>
-            </div>
           </div>
-        </div>
-      <?php } }?>
-    <!--==========================
-      Team Section
-    ============================-->
-    <!-- <section id="team">
-      <div class="container">
-        <div class="section-header wow fadeInUp">
-          <h3>Team</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp">
-            <div class="member">
-              <img src="img/team-1.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="member">
-              <img src="img/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="member">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
       </div>
-    </section> -->
 
+    <?php } ?>
    
   </main>
 
