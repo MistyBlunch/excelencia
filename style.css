@@ -925,8 +925,34 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 
 /* Call To Action Section
 --------------------------------*/
-
-
+.list-notice .post-date{
+  margin: 0 0 .2rem 0;
+  color: #795548;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.list-notice .post-header .post-title{
+  line-height: 1.5;
+  padding: 0;
+  font-size: 20px;
+  margin: 0 0 1rem 0;
+  font-weight: bold;
+}
+.list-notice .post-header .post-title a{
+  color: #555555;
+}
+.list-notice .post-header .post-title a:hover{
+  color: #742733;
+}
+.list-notice .post-content{
+  color: #565456;
+  font-size: 15px;
+}
+.list-notice article{
+  margin: 1rem 0 1rem 0;
+  padding: 1rem 0 1rem 0;
+  border-bottom: 1px solid #cdcdcd;
+}
 /* Call To Action Section
 --------------------------------*/
 
