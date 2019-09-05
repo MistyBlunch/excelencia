@@ -462,7 +462,7 @@ add_action( 'init', 'excellence_testimony_post_type' );
 function getSlider($terms){
     $args = array(
         'post_type' => 'slide',
-        'posts_per_page' => 3,
+        'posts_per_page' => 6,
         'tax_query' => array( array(
             'taxonomy' => 'category_slider',
             'terms' => $terms,
