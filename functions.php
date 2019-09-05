@@ -535,7 +535,7 @@ function orderDate($a, $b){
 function getEvents(){
     $args = array(
         'post_type' => 'event',
-        'posts_per_page' => 6,
+        'posts_per_page' => 10,
     );
     $row = new WP_Query($args);
     $data = $row->get_posts();
