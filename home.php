@@ -252,7 +252,9 @@ $events = getEvents();
         <div class="owl-carousel testimonials-carousel">
             <?php foreach ($testimony as $item){ ?>
               <div class="testimonial-item">
-                <div id="video-<?php echo $item['ID'] ?>" class="video-item" data-toggle="modal" data-target="#modal-video-<?php echo $item['ID'] ?>">
+                <div id="video-<?php echo $item['ID'] ?>" class="video-item" data-title="<?php echo $item['post_title'] ?> - <?php echo $item['post_description'] ?>"
+                     data-toggle="modal" data-src="<?php echo $item['url_video'] ?>"
+                     data-target="#modal-video">
                   <div class="video">
                     <div class="velo"></div>
                       <img src="<?php echo $item['image_full'][0] ?>" class="img-fluid" alt="<?php echo $item['post_title'] ?>">
@@ -270,25 +272,27 @@ $events = getEvents();
 
       </div>
     </section><!-- #testimonials -->
-      <?php foreach ($testimony as $item){ ?>
-        <div class="modal fade modal-video" id="modal-video-<?php echo $item['ID'] ?>" tabindex="-1" role="dialog" aria-labelledby="modal-label-<?php echo $item['ID'] ?>" aria-hidden="true">
+
+        <div class="modal fade modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="modal-label-<?php echo $item['ID'] ?>"><?php echo $item['post_title'] ?></h5>
+                <h5 class="modal-title" id="modal-label"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
                   <div class="embed-responsive embed-responsive-16by9">
-                  <?php echo $item['post_content'] ?>
+                      <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                   </div>
               </div>
             </div>
           </div>
         </div>
-      <?php } }?>
+
+
+      <?php }?>
 
 
    

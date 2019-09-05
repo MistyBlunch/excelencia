@@ -92,21 +92,42 @@
 
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
+    autoplay: false,
     dots: true,
-    loop: true,
+    loop: false,
     responsive: { 0: { items: 1 }, 768: { items: 3 }, 900: { items: 3 }
     }
   });
 
-    $('.modal-video').on('hidden.bs.modal', function() {
+    /*$('.modal-video').on('hidden.bs.modal', function() {
         var $this = $(this).find('iframe'),
             tempSrc = $this.attr('src');
         $this.attr('src', "");
         $this.attr('src', tempSrc);
+    });*/
+
+    var $videoSrc, $videoTitle;
+
+    $('.video-item').click(function() {
+
+        $videoSrc = $(this).data( "src" );
+        $videoTitle = $(this).data("title");
+        console.log($videoSrc);
     });
 
-  $('.nav-item.dropdown').hover(function () {
+
+    $('#modal-video').on('shown.bs.modal', function (e) {
+        $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" );
+        $("#modal-label").html($videoTitle);
+    });
+
+    $('#modal-video').on('hide.bs.modal', function (e) {
+        // a poor man's stop video
+        $("#video").attr('src',$videoSrc);
+    })
+
+
+    $('.nav-item.dropdown').hover(function () {
       $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
   }, function () {
       $(this).find('.dropdown-menu').first().stop(true, true).slideUp(105)

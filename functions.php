@@ -522,6 +522,7 @@ function getTestimony(){
         $thumbID = get_post_thumbnail_id($item->ID);
         $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
         $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
+        $tmp['url_video'] = get_post_meta($item->ID,'url_video', true);
         $post[] = $tmp;
     }
     return  $post;
