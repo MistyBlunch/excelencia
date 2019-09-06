@@ -854,24 +854,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #services .magazine{
-  background: url("img/revista.jpg");
-  background-size: cover;
   height: 385px;
 }
 #services .magazine.institution{
-  background: url("img/revista_institutional.jpg");
-  background-size: cover;
   height: 385px;
 }
-.box-img{
-  padding: 2rem;
-  width: 85%;
-  color: #fff;
-}
-.box-img h3{
-  text-transform: uppercase;
-  font-weight: 700;
-}
+
 #services .box-form .card{
   background: #000; 
 }
