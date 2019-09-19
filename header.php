@@ -127,7 +127,7 @@
                     $custom_logo_id = get_theme_mod( 'custom_logo' );
                     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     ?>
-                    <img width="180px" src="<?php  echo $image[0]; ?>"/>
+                    <img width="250px" src="<?php  echo $image[0]; ?>"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
