@@ -108,6 +108,12 @@
                     );
                     ?>
                 <?php endif; ?>
+                <?php if(get_theme_mod('cd_phone_contact')) { ?>
+                    <div class="phone-number">
+                        <img src="<?php echo get_theme_mod('cd_country'); ?>" width="32px" />
+                        <?php echo get_theme_mod('cd_phone_contact'); ?>
+                    </div>
+                <?php } ?>
             </nav>
         </div>
     </div>
@@ -147,13 +153,7 @@
 
                 <?php endif; ?>
 
-                <?php if(get_theme_mod('cd_phone_contact')) { ?>
-                    <div class="phone-number">
-                        <img src="<?php echo get_theme_mod('cd_country'); ?>" width="32px" />
-                        <?php echo get_theme_mod('cd_phone_contact'); ?>
-                    </div>
 
-                <?php } ?>
 
                 <?php if(get_theme_mod('cd_campus_virtual')) { ?>
                     <a class="btn btn-primary btn-virtual" href="<?php echo get_theme_mod('cd_campus_virtual'); ?>" target="_blank" >

@@ -1282,6 +1282,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 
 #testimonials .testimonial-item {
   text-align: center;
+  margin-right: 20px;
 }
 
 #testimonials .video-item .video{
@@ -1293,7 +1294,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   top: 0px;
   bottom: 0px;
   left: 0px;
-  right: 0px;
+  right: 20px;
   height: 100%;
   z-index: 1;
 }
