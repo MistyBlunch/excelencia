@@ -6,7 +6,6 @@ get_header();
 $sliders = getSlider('home');
 $testimony = getTestimony();
 $events = getEvents();
-var_dump($events);
 ?>
 <!--==========================
   Intro Section
