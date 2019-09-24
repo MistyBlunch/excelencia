@@ -31,6 +31,7 @@
      $bgFooter = get_theme_mod('cd_footer_color_bg') ? get_theme_mod('cd_footer_color_bg') : '#3e3838';
      $textFooter = get_theme_mod('cd_footer_color_text') ? get_theme_mod('cd_footer_color_text') : '#FFFFFF';
      $bgNotice = get_theme_mod('cd_notice_color_bg') ? get_theme_mod('cd_notice_color_bg') : '#6b3c62';
+     $bgPublications = get_theme_mod('cd_publications_color_bg') ? get_theme_mod('cd_publications_color_bg') : '#6b3c62';
      $bgMenu = get_theme_mod('cd_menu_color') ? get_theme_mod('cd_menu_color') : '#000000';
      ?>
     .section-header h3{
@@ -54,8 +55,11 @@
     #footer{
         color: <?php echo $textFooter; ?>;
     }
-    .box-notice .image{
+    .box-type-1 .box-notice .image{
         background: <?php echo $bgNotice; ?>;
+    }
+    .box-type-2 .box-notice .image{
+        background: <?php echo $bgPublications; ?>;
     }
     .header .menu-top{
         background: <?php echo $bgMenu; ?>;

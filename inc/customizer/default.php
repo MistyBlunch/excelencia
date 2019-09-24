@@ -124,6 +124,40 @@ function excellence_customizer_settings($wp_customize) {
         )
     );
 
+    // Publications
+
+    $wp_customize->add_setting( 'cd_display_publications' , array(
+        'default'     => true,
+        'transport'   => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'cd_display_publications', array(
+        'label' => 'Mostrar sección de publicaciones',
+        'section' => 'cd_contact',
+        'settings' => 'cd_display_publications',
+        'type' => 'checkbox',
+    ) );
+
+    // Color Publications
+    $wp_customize->add_setting( 'cd_publications_color_bg',
+        array(
+            'default' => '#6b3c62',
+            'transport' => 'refresh',
+            'sanitize_callback' => 'sanitize_hex_color'
+        )
+    );
+
+    $wp_customize->add_control( 'cd_publications_color_bg',
+        array(
+            'label' => __( 'Color de fondo' ),
+            'description' => esc_html__( 'Elige color de fondo de Publicaciones' ),
+            'section' => 'cd_contact',
+            'priority' => 10, // Optional. Order priority to load the control. Default: 10
+            'type' => 'color',
+            'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
+        )
+    );
+
     // Testimonios
     $wp_customize->add_setting( 'cd_display_testimony' , array(
         'default'     => true,

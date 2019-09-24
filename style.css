@@ -581,7 +581,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   padding-top: calc(50% - 7.5px);
 }
 .box-notice .image{
-  opacity: .7;
+  opacity: .85;
   background-repeat: no-repeat;
   background-position: center;
   top: 50%;
