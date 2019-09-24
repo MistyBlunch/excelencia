@@ -177,66 +177,115 @@ $events = getEvents();
       <?php } ?>
 
       <?php if (get_theme_mod('cd_display_notice') == 1 ) { ?>
-    <!--==========================
-      Area de Noticias
-    ============================-->
-    <section id="about">
-      <div class="container">
+          <!--==========================
+            Area de Noticias
+          ============================-->
+          <section id="about">
+              <div class="container">
 
-        <header class="section-header">
-          <h3>Noticias y publicaciones</h3>
-        </header>
+                  <header class="section-header">
+                      <h3>Noticias</h3>
+                  </header>
 
-          <!-- Noticias tipo BCP -->
+                  <!-- Noticias tipo BCP -->
 
-          <div class="list-notice wow fadeInUp">
-              <div class="row">
-          <?php
-              $args = array (
+                  <div class="list-notice wow fadeInUp">
+                      <div class="row">
+                          <?php
+                          $args = array (
 
-                  'posts_per_page' =>6,
-                  'post_type' => 'post',
-                  'post_status' => 'publish',
-                  'paged' => 1,
-              );
+                              'posts_per_page' =>6,
+                              'post_type' => 'post',
+                              'post_status' => 'publish',
+                              'paged' => 1,
+                              'category_name' => 'notices'
+                          );
 
-              $loop = new WP_Query($args);
-              if ( $loop->have_posts() ) :
-                  $i=0;
-                while ($loop->have_posts()) : $loop->the_post();
-                $i++;
-                $classColumn = 'box-type-1 col-sm-5 col-sm-offset-1';
-                $boxClass = 'bcp-box-1';
-                if($i%2==0){
-                    $classColumn = 'box-type-2 col-sm-7';
-                    $boxClass = 'bcp-box-2';
-                }
-              ?>
-                  <div class="<?php echo $classColumn; ?>">
+                          $loop = new WP_Query($args);
+                          if ( $loop->have_posts() ) :
+                              while ($loop->have_posts()) : $loop->the_post();
+                                  ?>
+                                  <div class="box-type-1 col-sm-4">
 
-                        <div class="box-notice <?php echo $boxClass ?>" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>)">
-                            <div class="image"></div>
-                            <div class="description">
-                                <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-                                <?php
-                                $excerpt = excellence_the_excerpt( 20 );
-                                echo wp_kses_post( wpautop( $excerpt ) );
-                                ?>
-                            </div>
-                        </div>
+                                      <div class="box-notice bcp-box-1" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>)">
+                                          <div class="image"></div>
+                                          <div class="description">
+                                              <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+                                              <?php
+                                              $excerpt = excellence_the_excerpt( 20 );
+                                              echo wp_kses_post( wpautop( $excerpt ) );
+                                              ?>
+                                          </div>
+                                      </div>
 
+                                  </div>
+
+                              <?php endwhile; wp_reset_postdata(); endif; ?>
+
+                      </div>
                   </div>
 
-              <?php endwhile; wp_reset_postdata(); endif; ?>
+                  <!-- Fin de bloque -->
 
               </div>
-          </div>
+          </section><!-- #notice -->
+      <?php } ?>
+      <?php if (get_theme_mod('cd_display_publications') == 1 ) { ?>
+          <!--==========================
+               Area de Publicaciones
+             ============================-->
+          <section id="about">
+              <div class="container">
 
-          <!-- Fin de bloque -->
+                  <header class="section-header">
+                      <h3>Publicaciones</h3>
+                  </header>
 
-      </div>
-    </section><!-- #about -->
-    <?php } ?>
+                  <!-- Noticias tipo BCP -->
+
+                  <div class="list-notice wow fadeInUp">
+                      <div class="row">
+                          <?php
+                          $args = array (
+
+                              'posts_per_page' =>6,
+                              'post_type' => 'post',
+                              'post_status' => 'publish',
+                              'paged' => 1,
+                              'category_name' => 'publications'
+                          );
+
+                          $loop = new WP_Query($args);
+                          if ( $loop->have_posts() ) :
+
+                              while ($loop->have_posts()) : $loop->the_post();
+
+                                  ?>
+                                  <div class="box-type-2 col-sm-6">
+
+                                      <div class="box-notice bcp-box-2" style="background-image: url(<?php echo get_the_post_thumbnail_url() ?>)">
+                                          <div class="image"></div>
+                                          <div class="description">
+                                              <h2 class="title"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+                                              <?php
+                                              $excerpt = excellence_the_excerpt( 20 );
+                                              echo wp_kses_post( wpautop( $excerpt ) );
+                                              ?>
+                                          </div>
+                                      </div>
+
+                                  </div>
+
+                              <?php endwhile; wp_reset_postdata(); endif; ?>
+
+                      </div>
+                  </div>
+
+                  <!-- Fin de bloque -->
+
+              </div>
+          </section><!-- #publications -->
+      <?php } ?>
 
       <?php if (get_theme_mod('cd_display_testimony') == 1 ) { ?>
     <!--==========================
