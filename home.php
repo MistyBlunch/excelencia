@@ -6,7 +6,7 @@ get_header();
 $sliders = getSlider('home');
 $testimony = getTestimony();
 $events = getEvents();
-
+var_dump($events);
 ?>
 <!--==========================
   Intro Section
@@ -155,8 +155,8 @@ $events = getEvents();
           <li class="event-list">
             <div class="event">
                 <div class="date">
-                  <div class="day"><?php echo $item['event_day']; ?></div>
-                  <div class="month">
+                  <div class="day" style="background-color: <?php echo $item['category_color'].'bd'; ?>"><?php echo $item['event_day']; ?></div>
+                  <div class="month" style="background-color: <?php echo $item['category_color']; ?>">
                     <?php echo $item['event_month']; ?>
                   </div>
                 </div>

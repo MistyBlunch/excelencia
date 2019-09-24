@@ -1201,13 +1201,13 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 #clients .event .date {
   float: left;
   margin-right: 10px;
-  background: #004C97;
+  background: #ffffff;
   text-align: center;
   width: 44px;
   color: #fff;
 }
 #clients .event .date .day {
-  background: #116AAF;
+  background: #ffffff;
   font-size: 18px;
 }
 #clients .event .date .month {

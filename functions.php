@@ -560,6 +560,11 @@ function getEvents(){
         $thumbID = get_post_thumbnail_id($item->ID);
         $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
         $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
+        $categories = get_the_terms($item->ID,['category_event']);
+        $categorySlug = $categories[0]->slug;
+        $tmp['category_slug'] = $categorySlug;
+        $tmp['category_name'] = $categories[0]->name;
+        $tmp['category_color'] = getColorCategoryEvent($categorySlug);
         $post[] = $tmp;
     }
 
@@ -575,7 +580,24 @@ function getEvents(){
     return  $post;
 }
 
-
+function getColorCategoryEvent($slug){
+    $color = "#116AAF";
+    switch ($slug){
+        case 'gestion':
+            $color = "#4e4e4e";
+            break;
+        case 'rrhh':
+            $color = "#6a3c63";
+            break;
+        case 'secretarias':
+            $color = "#952331";
+            break;
+        case 'social':
+            $color = "#4a7bb4";
+            break;
+    }
+    return $color;
+}
 
 
 function the_breadcrumbs() {
