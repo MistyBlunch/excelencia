@@ -112,6 +112,12 @@
                     );
                     ?>
                 <?php endif; ?>
+                <?php if(get_theme_mod('cd_phone_contact')) { ?>
+                    <div class="phone-number">
+                        <img src="<?php echo get_theme_mod('cd_country'); ?>" width="32px" />
+                        <?php echo get_theme_mod('cd_phone_contact'); ?>
+                    </div>
+                <?php } ?>
             </nav>
         </div>
     </div>
@@ -125,7 +131,7 @@
                     $custom_logo_id = get_theme_mod( 'custom_logo' );
                     $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     ?>
-                    <img width="180px" src="<?php  echo $image[0]; ?>"/>
+                    <img width="262px" src="<?php  echo $image[0]; ?>"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -151,13 +157,7 @@
 
                 <?php endif; ?>
 
-                <?php if(get_theme_mod('cd_phone_contact')) { ?>
-                    <div class="phone-number">
-                        <img src="<?php echo get_theme_mod('cd_country'); ?>" width="32px" />
-                        <?php echo get_theme_mod('cd_phone_contact'); ?>
-                    </div>
 
-                <?php } ?>
 
                 <?php if(get_theme_mod('cd_campus_virtual')) { ?>
                     <a class="btn btn-primary btn-virtual" href="<?php echo get_theme_mod('cd_campus_virtual'); ?>" target="_blank" >
