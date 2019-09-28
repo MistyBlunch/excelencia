@@ -1269,6 +1269,9 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   background-color:#116aaf;
 }
 
+#fbmsg .wp-sheet{
+  height: 50% !important;
+}
 /* Testimonials Section
 --------------------------------*/
 
