@@ -50,6 +50,31 @@ $events = getEvents();
                                 }
                                 ?>
                             </a>
+
+                            <?php if($item['post_url_2']!=''){ ?>
+                            <a href="<?php echo $item['post_url_2'] ?>" class="btn-get-started_2 scrollto">
+                                <?php
+                                if($item['post_btn_2']!=''){
+                                    echo $item['post_btn_2'];
+                                } else {
+                                    echo 'Más Información';
+                                }
+                                ?>
+                            </a>
+                            <?php } ?>
+
+                            <?php if($item['post_url_3']!=''){ ?>
+
+                            <a href="<?php echo $item['post_url_3'] ?>" class="btn-get-started_3 scrollto">
+                                <?php
+                                if($item['post_btn_3']!=''){
+                                    echo $item['post_btn_3'];
+                                } else {
+                                    echo 'Más Información';
+                                }
+                                ?>
+                            </a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

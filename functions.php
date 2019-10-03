@@ -305,6 +305,10 @@ function getSlider($terms){
         $tmp['post_url_video'] = get_post_meta($item->ID,'url_video', true);
         $tmp['post_url'] = get_post_meta($item->ID,'link_botton', true);
         $tmp['post_btn'] = get_post_meta($item->ID,'text_button', true);
+        $tmp['post_url_2'] = get_post_meta($item->ID,'link_botton_2', true);
+        $tmp['post_btn_2'] = get_post_meta($item->ID,'text_button_2', true);
+        $tmp['post_url_3'] = get_post_meta($item->ID,'link_botton_3', true);
+        $tmp['post_btn_3'] = get_post_meta($item->ID,'text_button_3', true);
         $tmp['post_subtitle'] = get_post_meta($item->ID,'subtitle', true);
         $thumbID = get_post_thumbnail_id($item->ID);
         $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );

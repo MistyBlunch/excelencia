@@ -415,6 +415,30 @@ h6 {
   background: #952331;
 }
 
+#intro .btn-get-started_2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #fff;
+  background: #b93879;
+}
+
+#intro .btn-get-started_3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 5px;
+  transition: 0.5s;
+  color: #fff;
+  background: #4b4746;
+}
+
 #intro .btn-get-started:hover {
   background: #5d2063;
   color: #ffffff;
