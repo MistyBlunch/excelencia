@@ -337,7 +337,7 @@ h6 {
 #intro .title {
   color: #fff;
   margin-bottom: 10px;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
@@ -1839,6 +1839,14 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     width: 100%;
     font-size: 1.2rem;
     text-align: center;
+  }
+  #intro .btn-get-started_2 {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  #intro .btn-get-started_2 {
+    margin-bottom: 10px;
+    width: 100%;
   }
   .section-title{
     font-size: 2rem;
