@@ -1839,6 +1839,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     width: 100%;
     font-size: 1.2rem;
     text-align: center;
+    margin-bottom: 10px;
   }
   #intro .btn-get-started_2 {
     margin-bottom: 10px;
