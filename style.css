@@ -439,7 +439,7 @@ h6 {
   background: #4b4746;
 }
 
-#intro .btn-get-started:hover {
+#intro .btn-get-started:hover, #intro .btn-get-started_2:hover, #intro .btn-get-started_3:hover {
   background: #5d2063;
   color: #ffffff;
 }
