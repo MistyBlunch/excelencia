@@ -534,7 +534,9 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   float: right;
   margin: 0;
 }
-
+#menu-principal li:last-child{
+  display: none;
+}
 /* Nav Meu Styling */
 
 .nav-menu a {
@@ -1920,5 +1922,22 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   }
   .navbar-dark .navbar-nav .nav-item:last-child{
     border-bottom: none;
+  }
+  .btn-virtual{
+    display: none;
+  }
+  #menu-principal li:last-child{
+    display: block;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    padding: .375rem .75rem;
+    font-weight: bold;
+  }
+  #menu-principal li:last-child a.nav-link{
+    font-weight: bold;
+    font-size: 14px;
   }
 }
