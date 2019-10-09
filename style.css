@@ -438,7 +438,7 @@ h6 {
 }
 
 #intro .btn-get-started:hover, #intro .btn-get-started_2:hover, #intro .btn-get-started_3:hover {
-  background: #5d2063;
+  background: #5d2063 !important;
   color: #ffffff;
 }
 div.wpforms-container-full .wpforms-form input.wpforms-field-medium{

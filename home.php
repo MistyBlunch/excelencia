@@ -41,23 +41,23 @@ $events = getEvents();
                             <p><?php echo $item['post_description']; ?></p>
                         </div>
                         <div class="link-action">
-                            <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto">
+                            <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto" style="background-color: <?php echo $item['color_button']; ?>">
                                 <?php
                                 if($item['post_btn']!=''){
                                     echo $item['post_btn'];
                                 } else {
-                                    echo 'Más Información';
+                                    echo 'Más información';
                                 }
                                 ?>
                             </a>
 
                             <?php if($item['post_url_2']!=''){ ?>
-                            <a href="<?php echo $item['post_url_2'] ?>" class="btn-get-started_2 scrollto">
+                            <a href="<?php echo $item['post_url_2'] ?>" class="btn-get-started_2 scrollto" style="background-color: <?php echo $item['color_button_2']; ?>">
                                 <?php
                                 if($item['post_btn_2']!=''){
                                     echo $item['post_btn_2'];
                                 } else {
-                                    echo 'Más Información';
+                                    echo 'Más información';
                                 }
                                 ?>
                             </a>
@@ -65,12 +65,12 @@ $events = getEvents();
 
                             <?php if($item['post_url_3']!=''){ ?>
 
-                            <a href="<?php echo $item['post_url_3'] ?>" class="btn-get-started_3 scrollto">
+                            <a href="<?php echo $item['post_url_3'] ?>" class="btn-get-started_3 scrollto" style="background-color: <?php echo $item['color_button_3']; ?>">
                                 <?php
                                 if($item['post_btn_3']!=''){
                                     echo $item['post_btn_3'];
                                 } else {
-                                    echo 'Más Información';
+                                    echo 'Más información';
                                 }
                                 ?>
                             </a>
