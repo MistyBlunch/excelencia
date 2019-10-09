@@ -337,15 +337,13 @@ h6 {
 
 #intro .title {
   margin-bottom: 10px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   line-height: 1;
   font-weight: 700;
-  text-transform: uppercase;
 }
 #intro .subtitle {
   margin-bottom: 10px;
   font-size: 2.5rem;
-  text-transform: uppercase;
   line-height: 1;
   font-weight: 700;
   margin-top: 3rem;
@@ -400,7 +398,9 @@ h6 {
 #intro .carousel-indicators li {
   cursor: pointer;
 }
-
+#intro .carousel-content .link-action a{
+  margin-bottom: .5rem;
+}
 #intro .btn-get-started {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -1812,7 +1812,11 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     height: 100vh;
   }
   #intro .carousel-content{
-    width: 100%;
+    width: 80%;
+    position: relative;
+    top: -10px;
+    margin: auto;
+    padding-left: 0;
   }
   #intro .carousel-item {
     width: 100%;
