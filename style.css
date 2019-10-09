@@ -1841,17 +1841,22 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   }
   #intro .btn-get-started{
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     margin-bottom: 10px;
+    padding: 5px 10px;
   }
   #intro .btn-get-started_2 {
     margin-bottom: 10px;
     width: 100%;
+    font-size: 1rem;
+    padding: 5px 10px;
   }
   #intro .btn-get-started_3 {
     margin-bottom: 10px;
     width: 100%;
+    font-size: 1rem;
+    padding: 5px 10px;
   }
   .section-title{
     font-size: 2rem;
