@@ -1803,11 +1803,17 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 
 }
 @media (max-width: 480px) {
+  .header {
+    position: inherit;
+  }
   .header-top{
     display: block;
   }
   .header-top .menu-right{
     display: none;
+  }
+  .menu-top .logo-movil{
+    width: 210px;
   }
   .link-action{
     text-align: center;
@@ -1819,7 +1825,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #intro .carousel-content{
     width: 60%;
     position: relative;
-    top: -65px;
+    top: -150px;
     /* margin: auto; */
     padding-left: 15px;
   }
@@ -1902,7 +1908,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     padding-top: 80%;
   }
   .site-main{
-    padding-top: 13rem;
+    padding-top: 1rem;
   }
   #footer .footer-top .footer-links {
     margin-bottom: 2rem;
