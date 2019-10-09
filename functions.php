@@ -310,6 +310,11 @@ function getSlider($terms){
         $tmp['post_url_3'] = get_post_meta($item->ID,'link_botton_3', true);
         $tmp['post_btn_3'] = get_post_meta($item->ID,'text_button_3', true);
         $tmp['post_subtitle'] = get_post_meta($item->ID,'subtitle', true);
+        $tmp['color_text'] = get_post_meta($item->ID,'color_text', true);
+        $tmp['color_button'] = get_post_meta($item->ID,'color_button', true);
+        $tmp['color_button_2'] = get_post_meta($item->ID,'color_button_2', true);
+        $tmp['color_button_3'] = get_post_meta($item->ID,'color_button_3', true);
+        $tmp['image_movil'] = get_post_meta($item->ID,'image_movil', true);
         $thumbID = get_post_thumbnail_id($item->ID);
         $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
         $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );

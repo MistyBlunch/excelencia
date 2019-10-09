@@ -281,7 +281,7 @@ h6 {
 
 #intro .carousel-item::before {
   content: '';
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -331,11 +331,11 @@ h6 {
 
 #intro .carousel-content {
   text-align: left;
-  width: 80%;
+  width: 50%;
+  padding-left: 2rem;
 }
 
 #intro .title {
-  color: #fff;
   margin-bottom: 10px;
   font-size: 2.5rem;
   line-height: 1;
@@ -343,7 +343,6 @@ h6 {
   text-transform: uppercase;
 }
 #intro .subtitle {
-  color: #fff;
   margin-bottom: 10px;
   font-size: 2.5rem;
   text-transform: uppercase;
@@ -353,7 +352,6 @@ h6 {
 }
 
 #intro .description {
-  color: #fff;
   font-size: 1.5rem;
 }
 
