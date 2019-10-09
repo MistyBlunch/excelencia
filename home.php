@@ -21,15 +21,18 @@ $events = getEvents();
           <?php foreach ($sliders as $item){ ?>
           <div id="slider-<?php echo $item['ID'] ?>" class="carousel-item <?php echo $item['post_active'] ?>">
               <?php if(!$item['post_url_video']) {?>
-              <div class="carousel-background">
-                <img src="<?php echo $item['image_full'][0] ?>" alt="<?php echo $item['post_title'] ?>">
-            </div>
+                <div class="carousel-background">
+                    <img src="<?php echo $item['image_full'][0] ?>" alt="<?php echo $item['post_title'] ?>">
+                </div>
+                  <div class="carousel-background-movil">
+                      <img src="<?php echo $item['image_movil'][0] ?>" >
+                  </div>
               <?php } else { ?>
-              <div class="carousel-video">
-                  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                      <source src="<?php echo $item['post_url_video'] ?>" type="video/mp4">
-                  </video>
-              </div>
+                  <div class="carousel-video">
+                      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                          <source src="<?php echo $item['post_url_video'] ?>" type="video/mp4">
+                      </video>
+                  </div>
               <?php } ?>
 
             <div class="carousel-container">

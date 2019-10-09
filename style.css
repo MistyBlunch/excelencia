@@ -441,6 +441,9 @@ h6 {
   background: #5d2063 !important;
   color: #ffffff;
 }
+#intro .carousel-background-movil{
+  display: none;
+}
 div.wpforms-container-full .wpforms-form input.wpforms-field-medium{
   width: 100% !important;
   max-width: 100% !important;
@@ -1770,6 +1773,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #nav-menu-container {
     padding-right: 60px;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -1796,6 +1800,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #mobile-nav-toggle {
     display: inline;
   }
+
 }
 @media (max-width: 480px) {
   .header-top{
@@ -1812,11 +1817,11 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     height: 100vh;
   }
   #intro .carousel-content{
-    width: 80%;
+    width: 60%;
     position: relative;
-    top: -10px;
-    margin: auto;
-    padding-left: 0;
+    top: -35px;
+    /* margin: auto; */
+    padding-left: 15px;
   }
   #intro .carousel-item {
     width: 100%;
@@ -1833,7 +1838,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     margin-bottom: 10px;
   }
   #intro .title{
-    font-size: 2rem;
+    font-size: 2.35rem;
     margin-bottom: 10px;
   }
   #intro .description{
@@ -1857,6 +1862,12 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     width: 100%;
     font-size: 1rem;
     padding: 5px 10px;
+  }
+  #intro .carousel-background{
+    display: none;
+  }
+  #intro .carousel-background-movil{
+    display: block;
   }
   .section-title{
     font-size: 2rem;

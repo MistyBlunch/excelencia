@@ -314,10 +314,11 @@ function getSlider($terms){
         $tmp['color_button'] = get_post_meta($item->ID,'color_button', true);
         $tmp['color_button_2'] = get_post_meta($item->ID,'color_button_2', true);
         $tmp['color_button_3'] = get_post_meta($item->ID,'color_button_3', true);
-        $tmp['image_movil'] = get_post_meta($item->ID,'image_movil', true);
+        $imageID = get_post_meta($item->ID,'image_movil', true);
         $thumbID = get_post_thumbnail_id($item->ID);
         $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
         $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
+        $tmp['image_movil'] = wp_get_attachment_image_src( $imageID, 'full' );
         if($counter==1){
             $tmp['post_active'] = 'active';
         }else{
