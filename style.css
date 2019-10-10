@@ -298,8 +298,8 @@ h6 {
 .carousel-indicators{
   justify-content: left;
   padding-left: 0;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin-right: 12%;
+  margin-left: 12%;
 }
 .carousel-indicators li{
   width: 15px;
@@ -374,7 +374,7 @@ h6 {
 #intro .carousel-content {
   text-align: left;
   width: 55%;
-  padding-left: 0;
+  padding-left: 8%;
 }
 
 #intro h1,
