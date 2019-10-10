@@ -295,7 +295,17 @@ h6 {
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
-
+.carousel-indicators{
+  justify-content: left;
+  padding-left: 0;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.carousel-indicators li{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
 #intro {
   display: table;
   width: 100%;
