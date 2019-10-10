@@ -1870,6 +1870,18 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     top: 0;
     padding-left: 0;
   }
+  #intro h1,
+  #intro h2,
+  #intro h3,
+  #intro h4,
+  #intro h5{
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-top: 10px;
+  }
+
   #intro .carousel-content .link-action{
     width: 80%;
   }
