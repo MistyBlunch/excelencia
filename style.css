@@ -1841,7 +1841,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     width: 288px;
     position: relative;
     top: 0;
-    padding-left: 1.5rem;
+    padding-left: 0;
   }
   #intro .carousel-content .link-action{
     width: 100%;
@@ -1974,5 +1974,9 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #menu-principal li:last-child a.nav-link{
     font-weight: bold;
     font-size: 14px;
+  }
+  #intro .carousel-control-prev,
+  #intro .carousel-control-next{
+    display: none;
   }
 }
