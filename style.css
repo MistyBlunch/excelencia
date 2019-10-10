@@ -47,6 +47,13 @@ h6 {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'Flexo';
+  src: url('fonts/Flexo-webfont.woff2') format('woff2'),
+  url('fonts/Flexo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 /* Back to top button */
 
 .back-to-top {
