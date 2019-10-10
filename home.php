@@ -13,33 +13,35 @@ $events = getEvents();
   <section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-
-        <ol class="carousel-indicators"></ol>
-
+        <div class="container">
+            <ol class="carousel-indicators"></ol>
+        </div>
         <div class="carousel-inner" role="listbox">
 
           <?php foreach ($sliders as $item){ ?>
           <div id="slider-<?php echo $item['ID'] ?>" class="carousel-item <?php echo $item['post_active'] ?>">
               <?php if(!$item['post_url_video']) {?>
-                <div class="carousel-background">
+                  <div class="carousel-background">
                     <img src="<?php echo $item['image_full'][0] ?>" alt="<?php echo $item['post_title'] ?>">
-                </div>
+                  </div>
                   <div class="carousel-background-movil">
                       <img src="<?php echo $item['image_movil'][0] ?>" >
                   </div>
               <?php } else { ?>
+                  <div class="carousel-background-movil">
+                      <img src="<?php echo $item['image_movil'][0] ?>" >
+                  </div>
                   <div class="carousel-video">
                       <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                           <source src="<?php echo $item['post_url_video'] ?>" type="video/mp4">
                       </video>
                   </div>
+
               <?php } ?>
 
             <div class="carousel-container">
                 <div class="container">
                     <div class="carousel-content" style="color: <?php echo $item['color_text']; ?>">
-                        <!--<h2 class="subtitle"><?php /*echo $item['post_subtitle']; */?></h2>
-                        <h1 class="title"><?php /*echo $item['post_title']; */?></h1>-->
                         <div class="description">
                             <?php echo $item['post_description']; ?>
                         </div>
