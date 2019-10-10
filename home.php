@@ -38,10 +38,10 @@ $events = getEvents();
             <div class="carousel-container">
                 <div class="container">
                     <div class="carousel-content" style="color: <?php echo $item['color_text']; ?>">
-                        <h2 class="subtitle"><?php echo $item['post_subtitle']; ?></h2>
-                        <h1 class="title"><?php echo $item['post_title']; ?></h1>
+                        <!--<h2 class="subtitle"><?php /*echo $item['post_subtitle']; */?></h2>
+                        <h1 class="title"><?php /*echo $item['post_title']; */?></h1>-->
                         <div class="description">
-                            <p><?php echo $item['post_description']; ?></p>
+                            <?php echo $item['post_description']; ?>
                         </div>
                         <div class="link-action">
                             <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto" style="background-color: <?php echo $item['color_button']; ?>">

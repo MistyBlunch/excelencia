@@ -42,7 +42,7 @@ h4,
 h5,
 h6 {
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -332,25 +332,20 @@ h6 {
 #intro .carousel-content {
   text-align: left;
   width: 50%;
-  padding-left: 2rem;
+  padding-left: 10rem;
 }
 
-#intro .title {
+#intro h1,
+#intro h2,
+#intro h3,
+#intro h4,
+#intro h5{
   margin-bottom: 10px;
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 700;
-}
-#intro .subtitle {
-  margin-bottom: 10px;
-  font-size: 2.5rem;
-  line-height: 1;
-  font-weight: 700;
-  margin-top: 3rem;
 }
 
 #intro .description {
   font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #intro .carousel-fade {
@@ -411,6 +406,7 @@ h6 {
   transition: 0.5s;
   color: #fff;
   background: #952331;
+  width: 100%;
 }
 
 #intro .btn-get-started_2 {
@@ -423,6 +419,7 @@ h6 {
   transition: 0.5s;
   color: #fff;
   background: #b93879;
+  width: 100%;
 }
 
 #intro .btn-get-started_3 {
@@ -435,6 +432,12 @@ h6 {
   transition: 0.5s;
   color: #fff;
   background: #4b4746;
+  width: 100%;
+}
+
+#intro .carousel-content .link-action{
+  width: 80%;
+  text-align: center;
 }
 
 #intro .btn-get-started:hover, #intro .btn-get-started_2:hover, #intro .btn-get-started_3:hover {
@@ -1825,7 +1828,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #intro .carousel-content{
     width: 60%;
     position: relative;
-    top: -100px;
+    top: -50px;
     /* margin: auto; */
     padding-left: 15px;
   }
@@ -1848,7 +1851,8 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     margin-bottom: 10px;
   }
   #intro .description{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   #intro .btn-get-started{
     width: 100%;
@@ -1956,8 +1960,8 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     background-color: #007bff;
     border-color: #007bff;
     margin-top: 0.5rem;
-    border-radius: 10px;
-    padding: .375rem .75rem;
+    border-radius: 5px;
+    padding: .15rem .75rem;
     font-weight: bold;
   }
   #menu-principal li:last-child a.nav-link{
