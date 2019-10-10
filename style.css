@@ -184,7 +184,7 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
-  font-family: "Flexo-Bold";
+  font-family: "Flexo-Bold", sans-serif;
 }
 .header .menu-top{
   padding: 0;
@@ -251,9 +251,12 @@ h6 {
   padding: 0 5px;
 }
 .navbar-dark .navbar-nav .nav-link{
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
 }
 .menu-left .menu,
 .menu-right .menu{
