@@ -184,6 +184,7 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+  font-family: "Flexo-Bold";
 }
 .header .menu-top{
   padding: 0;
@@ -238,7 +239,7 @@ h6 {
 }
 .navbar-top .nav-link{
   color: #666666;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
   padding-top: 0;
   padding-bottom: 0;
