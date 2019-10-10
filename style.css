@@ -451,7 +451,6 @@ h6 {
   transition: 0.5s;
   color: #fff;
   background: #952331;
-  width: 100%;
 }
 
 #intro .btn-get-started_2 {
@@ -463,7 +462,6 @@ h6 {
   transition: 0.5s;
   color: #fff;
   background: #b93879;
-  width: 100%;
 }
 
 #intro .btn-get-started_3 {
@@ -475,12 +473,10 @@ h6 {
   transition: 0.5s;
   color: #fff;
   background: #4b4746;
-  width: 100%;
 }
 
 #intro .carousel-content .link-action{
-  width: 80%;
-  text-align: center;
+  width: 100%;
 }
 
 #intro .btn-get-started:hover, #intro .btn-get-started_2:hover, #intro .btn-get-started_3:hover {
