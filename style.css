@@ -10,11 +10,28 @@ Version: 2.0
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "Flexo Demi";
+  src: url("fonts/Flexo-Demi.eot"); /* IE9*/
+  src: url("fonts/Flexo-Demi.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/Flexo-Demi.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/Flexo-Demi.woff") format("woff"), /* chrome、firefox */
+  url("fonts/Flexo-Demi.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/Flexo-Demi.svg#Flexo W01 Demi") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {
+  font-family: "Flexo";
+  src: url("fonts/Flexo-webfont.woff2") format("woff2"),
+  url("fonts/Flexo-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   background: #fff;
   color: #666666;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Flexo Demi', sans-serif;
 }
 
 a {
@@ -41,19 +58,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Flexo", sans-serif;
   font-weight: 700;
   margin: 0 0 20px 0;
   padding: 0;
 }
 
-@font-face {
-  font-family: 'Flexo';
-  src: url('fonts/Flexo-webfont.woff2') format('woff2'),
-  url('fonts/Flexo-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 /* Back to top button */
 
 .back-to-top {
