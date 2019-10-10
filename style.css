@@ -1838,10 +1838,10 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     height: 100%;
   }
   #intro .carousel-content{
-    width: 100%;
+    width: 288px;
     position: relative;
     top: 0;
-    padding-left: 15px;
+    padding-left: 1.5rem;
   }
   #intro .carousel-content .link-action{
     width: 100%;
