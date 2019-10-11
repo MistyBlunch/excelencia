@@ -11,7 +11,7 @@ Version: 2.0
 # General
 --------------------------------------------------------------*/
 @font-face {
-  font-family: "Flexo Demi";
+  font-family: "Flexo-Demi";
   src: url("fonts/Flexo-Demi.eot"); /* IE9*/
   src: url("fonts/Flexo-Demi.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
   url("fonts/Flexo-Demi.woff2") format("woff2"), /* chrome、firefox */
@@ -458,13 +458,19 @@ h6 {
   display: none;
 }
 #intro .btn-slider{
+  width: 192px;
+  height: 56px;
+  font-size: 18px;
   font-weight: 700;
-  font-size: 1.2rem;
+  line-height: 1.33;
+  padding-top: 16px;
+  margin-top: 24px;
   display: inline-block;
-  padding: 8px 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  color: #fff;
+  text-align: center;
+  font-family: "Flexo-Demi", sans-serif;
+  letter-spacing: normal;
+  color: #FFF;
+  border-radius: 4px;
 }
 #intro .btn-get-started {
   background: #952331;
