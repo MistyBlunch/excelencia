@@ -295,11 +295,26 @@ h6 {
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
+/*.container-indicators{
+  position: absolute;
+  bottom: 0;
+  z-index: 14;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}*/
 .carousel-indicators{
+  position: absolute;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  bottom: 40px;
+  padding: 0 0 0 6rem;
   justify-content: left;
-  padding-left: 0;
-  margin-right: 12%;
-  margin-left: 12%;
+  top: inherit;
+  left: inherit;
+  right: inherit;
 }
 .carousel-indicators li{
   width: 15px;
@@ -2028,5 +2043,10 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   }
   #intro .carousel-content .link-action a br{
     display: inherit;
+  }
+  .carousel-indicators{
+    justify-content: center;
+    padding: 0;
+    width: 100%;
   }
 }

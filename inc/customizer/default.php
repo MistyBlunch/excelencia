@@ -52,6 +52,18 @@ function excellence_customizer_settings($wp_customize) {
         )
     );
 
+    $wp_customize->add_setting( 'cd_display_arrow' , array(
+        'default'     => true,
+        'transport'   => 'refresh',
+    ) );
+
+    $wp_customize->add_control( 'cd_display_arrow', array(
+        'label' => 'Mostrar flechas del Slider',
+        'section' => 'cd_contact',
+        'settings' => 'cd_display_arrow',
+        'type' => 'checkbox',
+    ) );
+
     $wp_customize->add_setting( 'cd_display_area' , array(
         'default'     => true,
         'transport'   => 'refresh',

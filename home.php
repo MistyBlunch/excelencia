@@ -13,11 +13,10 @@ $events = getEvents();
   <section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-        <div class="container">
-            <ol class="carousel-indicators"></ol>
-        </div>
+          <div class="container">
+              <ol class="carousel-indicators"></ol>
+          </div>
         <div class="carousel-inner" role="listbox">
-
           <?php foreach ($sliders as $item){ ?>
           <div id="slider-<?php echo $item['ID'] ?>" class="carousel-item <?php echo $item['post_active'] ?>">
               <?php if(!$item['post_url_video']) {?>
@@ -90,15 +89,17 @@ $events = getEvents();
 
         </div>
 
-       <!--  <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
 
-        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a> -->
+          <?php if (get_theme_mod('cd_display_arrow') == 1 ) { ?>
+           <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          <?php } ?>
 
       </div>
     </div>
