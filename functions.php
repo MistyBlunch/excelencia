@@ -314,6 +314,7 @@ function getSlider($terms){
         $tmp['color_button'] = get_post_meta($item->ID,'color_button', true);
         $tmp['color_button_2'] = get_post_meta($item->ID,'color_button_2', true);
         $tmp['color_button_3'] = get_post_meta($item->ID,'color_button_3', true);
+        $tmp['link_target'] = get_post_meta($item->ID,'link_target', true);
         $imageID = get_post_meta($item->ID,'image_movil', true);
         $thumbID = get_post_thumbnail_id($item->ID);
         $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
