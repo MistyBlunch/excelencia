@@ -1888,7 +1888,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     height: 100%;
   }
   #intro .carousel-content{
-    width: 288px;
+    width: 240px;
     position: relative;
     top: 0;
     padding-left: 0;
@@ -1899,7 +1899,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #intro h4,
   #intro h5{
     margin-bottom: 10px;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 900;
     line-height: 1.25;
     margin-top: 10px;
@@ -1920,8 +1920,9 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   }
 
   #intro .description{
-    font-size: 1.2rem;
+    font-size: 15px;
     margin-bottom: 1rem;
+    line-height: 1.5
   }
   #intro .btn-get-started{
     width: 100%;
