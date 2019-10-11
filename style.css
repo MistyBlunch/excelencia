@@ -1892,6 +1892,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     position: relative;
     top: 0;
     padding-left: 0;
+    padding-top: .5rem;
   }
   #intro h1,
   #intro h2,
@@ -2046,7 +2047,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     display: inherit;
   }
   .carousel-indicators{
-    justify-content: center;
+    justify-content: left;
     padding: 0;
     width: 93%;
   }
