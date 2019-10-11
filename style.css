@@ -464,7 +464,7 @@ h6 {
   font-weight: 700;
   line-height: 1.33;
   padding-top: 16px;
-  margin-top: 24px;
+  margin-top: 15px;
   display: inline-block;
   text-align: center;
   font-family: "Flexo-Demi", sans-serif;
@@ -1858,7 +1858,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     width: 210px;
   }
   .link-action{
-    text-align: center;
+    text-align: left;
   }
   #intro {
     width: 100%;
@@ -1887,7 +1887,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   }
 
   #intro .carousel-content .link-action{
-    width: 80%;
+    width: 100%;
   }
   #intro .carousel-item {
     width: 100%;
@@ -1906,11 +1906,14 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     line-height: 1.5
   }
   #intro .btn-slider{
-    width: 100%;
-    font-size: 1rem;
-    text-align: center;
-    margin-bottom: 10px;
-    padding: 5px 10px;
+    width: 172px;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+    padding-top: 14px;
+    text-decoration: none;
+    margin-top: 16px;
   }
   #intro .carousel-background{
     display: none;
