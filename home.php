@@ -45,7 +45,7 @@ $events = getEvents();
                             <?php echo $item['post_description']; ?>
                         </div>
                         <div class="link-action">
-                            <a href="<?php echo $item['post_url'] ?>" class="btn-get-started scrollto" style="background-color: <?php echo $item['color_button']; ?>">
+                            <a href="<?php echo $item['post_url'] ?>" class="btn-slider btn-get-started scrollto" style="background-color: <?php echo $item['color_button']; ?>">
                                 <?php
                                 if($item['post_btn']!=''){
                                     echo $item['post_btn'];
@@ -56,7 +56,7 @@ $events = getEvents();
                             </a>
 
                             <?php if($item['post_url_2']!=''){ ?>
-                            <a href="<?php echo $item['post_url_2'] ?>" class="btn-get-started_2 scrollto" style="background-color: <?php echo $item['color_button_2']; ?>">
+                            <a href="<?php echo $item['post_url_2'] ?>" class="btn-slider btn-get-started_2 scrollto" style="background-color: <?php echo $item['color_button_2']; ?>">
                                 <?php
                                 if($item['post_btn_2']!=''){
                                     echo $item['post_btn_2'];
@@ -69,7 +69,7 @@ $events = getEvents();
 
                             <?php if($item['post_url_3']!=''){ ?>
 
-                            <a href="<?php echo $item['post_url_3'] ?>" class="btn-get-started_3 scrollto" style="background-color: <?php echo $item['color_button_3']; ?>">
+                            <a href="<?php echo $item['post_url_3'] ?>" class="btn-slider btn-get-started_3 scrollto" style="background-color: <?php echo $item['color_button_3']; ?>">
                                 <?php
                                 if($item['post_btn_3']!=''){
                                     echo $item['post_btn_3'];

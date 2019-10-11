@@ -403,40 +403,33 @@ h6 {
   line-height: 1;
   margin-top: 16px;
 }
-
 #intro p{
   font-weight: 400;
   line-height: 1.5;
 }
-
 #intro .description {
   margin-bottom: 1.5rem;
   font-size: 18px;
   line-height: 1.78;
   font-family: "Flexo-Bold", sans-serif;
 }
-
 #intro .carousel-fade {
   overflow: hidden;
 }
-
 #intro .carousel-fade .carousel-inner .carousel-item {
   transition-property: opacity;
 }
-
 #intro .carousel-fade .carousel-inner .carousel-item,
 #intro .carousel-fade .carousel-inner .active.carousel-item-left,
 #intro .carousel-fade .carousel-inner .active.carousel-item-right {
   opacity: 0;
 }
-
 #intro .carousel-fade .carousel-inner .active,
 #intro .carousel-fade .carousel-inner .carousel-item-next.carousel-item-left,
 #intro .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
   opacity: 1;
   transition: 0.5s;
 }
-
 #intro .carousel-fade .carousel-inner .carousel-item-next,
 #intro .carousel-fade .carousel-inner .carousel-item-prev,
 #intro .carousel-fade .carousel-inner .active.carousel-item-left,
@@ -445,19 +438,16 @@ h6 {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
 #intro .carousel-control-prev,
 #intro .carousel-control-next {
   width: 10%;
 }
-
 #intro .carousel-control-next-icon,
 #intro .carousel-control-prev-icon {
   background: none;
   font-size: 32px;
   line-height: 1;
 }
-
 #intro .carousel-indicators li {
   cursor: pointer;
 }
@@ -467,7 +457,7 @@ h6 {
 #intro .carousel-content .link-action a br{
   display: none;
 }
-#intro .btn-get-started {
+#intro .btn-slider{
   font-weight: 700;
   font-size: 1.2rem;
   display: inline-block;
@@ -475,35 +465,19 @@ h6 {
   border-radius: 5px;
   transition: 0.5s;
   color: #fff;
+}
+#intro .btn-get-started {
   background: #952331;
 }
-
 #intro .btn-get-started_2 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  display: inline-block;
-  padding: 8px 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  color: #fff;
   background: #b93879;
 }
-
 #intro .btn-get-started_3 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  display: inline-block;
-  padding: 8px 20px;
-  border-radius: 5px;
-  transition: 0.5s;
-  color: #fff;
   background: #4b4746;
 }
-
 #intro .carousel-content .link-action{
   width: 100%;
 }
-
 #intro .btn-get-started:hover, #intro .btn-get-started_2:hover, #intro .btn-get-started_3:hover {
   background: #5d2063 !important;
   color: #ffffff;
@@ -1925,23 +1899,11 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     margin-bottom: 1rem;
     line-height: 1.5
   }
-  #intro .btn-get-started{
+  #intro .btn-slider{
     width: 100%;
     font-size: 1rem;
     text-align: center;
     margin-bottom: 10px;
-    padding: 5px 10px;
-  }
-  #intro .btn-get-started_2 {
-    margin-bottom: 10px;
-    width: 100%;
-    font-size: 1rem;
-    padding: 5px 10px;
-  }
-  #intro .btn-get-started_3 {
-    margin-bottom: 10px;
-    width: 100%;
-    font-size: 1rem;
     padding: 5px 10px;
   }
   #intro .carousel-background{
