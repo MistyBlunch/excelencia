@@ -155,7 +155,7 @@ function excellence_area_post_type() {
         'rewrite'              => array( 'slug' => 'area' ),
         'has_archive'          => true,
         'menu_position'        => 30,
-        'menu_icon'            => 'dashicons-images-alt2',
+        'menu_icon'            => 'dashicons-awards',
 
     );
     register_post_type( 'area', $args );
