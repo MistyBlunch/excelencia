@@ -4,6 +4,7 @@
 
 get_header();
 $sliders = getSlider('home');
+$areas = getAreas();
 $testimony = getTestimony();
 $events = getEvents();
 ?>

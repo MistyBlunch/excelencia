@@ -394,6 +394,29 @@ function getTestimony(){
     return  $post;
 }
 
+function getAreas(){
+    $args = array(
+        'post_type' => 'area',
+        'posts_per_page' => 10,
+        'orderby'=> 'rand'
+    );
+    $row = new WP_Query($args);
+    $data = $row->get_posts();
+    $post = null;
+    foreach ($data as $item){
+        $tmp['ID'] = $item->ID;
+        $tmp['area_author'] = $item->post_author;
+        $tmp['area_date'] = $item->post_date;
+        $tmp['area_type'] = $item->post_type;
+        $tmp['area_name'] = get_post_meta($item->ID,'area_name', true);
+        $tmp['area_url'] = get_post_meta($item->ID,'area_url', true);
+        $tmp['area_color'] = get_post_meta($item->ID,'area_color', true);
+        $tmp['area_target'] = get_post_meta($item->ID,'area_target', true);
+        $post[] = $tmp;
+    }
+    return  $post;
+}
+
 function orderDate($a, $b){
     return strtotime($a['date_event'] - $b['date_event']);
 }
