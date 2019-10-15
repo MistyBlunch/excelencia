@@ -125,6 +125,44 @@ add_action( 'wp_enqueue_scripts', 'excellence_scripts' );
  */
 require get_template_directory() . '/inc/template-tags.php';
 
+/**
+ * Registers the slider post type.
+ */
+function excellence_area_post_type() {
+    $labels = array(
+        'name'               => __( 'Áreas' ),
+        'singular_name'      => __( 'Área' ),
+        'add_new'            => __( 'Agregar área' ),
+        'add_new_item'       => __( 'Agregar área' ),
+        'edit_item'          => __( 'Editar área' ),
+        'new_item'           => __( 'Agregar área' ),
+        'view_item'          => __( 'Visualizar área' ),
+        'search_items'       => __( 'Buscar área' ),
+        'not_found'          => __( 'No se encontro área' ),
+        'not_found_in_trash' => __( 'No se encontro área en la papelera' )
+    );
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'revisions',
+    );
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'area' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-images-alt2',
+
+    );
+    register_post_type( 'area', $args );
+}
+add_action( 'init', 'excellence_area_post_type' );
+
+
 function create_taxonomies_slider() {
 
     $labels = array(
