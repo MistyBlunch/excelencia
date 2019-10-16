@@ -513,9 +513,58 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   background-color: #ff5100 !important;
   border-color: #ff5100 !important;
 }
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+/* Areas */
+.areas-carousel .area-item{
+  padding: 1rem;
+  text-align: center;
+
+}
+.areas-carousel .area-item .area a{
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.areas-carousel .area-item .area{
+  font-size: 2.3rem;
+  line-height: 45px;
+  height: 220px;
+  width: 220px;
+  margin: auto;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 20px;
+}
+.areas-carousel .owl-nav{
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+.areas-carousel .owl-nav .owl-prev,
+.areas-carousel .owl-nav .owl-next{
+  position: absolute;
+  height: 100px;
+  color: inherit;
+  background: none;
+  border: none;
+  z-index: 100;
+}
+.areas-carousel .owl-nav .owl-prev i,
+.areas-carousel .owl-nav .owl-next i{
+  font-size: 2.5rem;
+  color: #cecece;
+}
+.areas-carousel .owl-nav .owl-prev{
+  left: 0;
+  top: 45px;
+}
+.areas-carousel .owl-nav .owl-next{
+  right: 0;
+  top: 45px;
+}
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
 
 /* Nav Menu Essentials */
 
@@ -767,13 +816,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 #featured-services .box {
   padding: 10px;
-}
-
-#featured-services i {
-  color: #18d26e;
-  font-size: 48px;
-  display: inline-block;
-  line-height: 1;
 }
 
 #featured-services h4 {

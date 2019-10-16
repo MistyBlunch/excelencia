@@ -7,6 +7,7 @@ $sliders = getSlider('home');
 $areas = getAreas();
 $testimony = getTestimony();
 $events = getEvents();
+
 ?>
 <!--==========================
   Intro Section
@@ -120,20 +121,18 @@ $events = getEvents();
           <h4 class="section-subtitle">Cursos, diplomados y congresos</h4>
       </div>
       
-      <div class="container">
-        <div class="row">
-
-            <div class="col-lg-12 col-12">
-                <ul class="areas">
-                    <?php if ( is_active_sidebar('home-school') ) : ?>
-                        <?php dynamic_sidebar('home-school'); ?>
-                    <?php endif; ?>
-                </ul>
-
-            </div>
-
-        </div>
-      </div>
+      <div class="container d-flex h-100">
+          <div class="owl-carousel areas-carousel">
+              <?php foreach ($areas as $item){ ?>
+                  <div class="area-item">
+                      <div class="area" style="background-color: <?php echo $item['area_color']; ?>">
+                          <a href="<?php echo $item['area_url']; ?>" target="<?php echo $item['area_target']; ?>">
+                              <?php echo $item['area_name']; ?>
+                          </a>
+                      </div>
+                  </div>
+              <?php } ?>
+          </div>
     </section><!-- #featured-services -->
       <?php } ?>
 

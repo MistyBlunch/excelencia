@@ -113,6 +113,21 @@
     }
   });
 
+  // Areas carousel (uses the Owl Carousel library)
+  $(".areas-carousel").owlCarousel({
+      autoplay: false,
+      dots: false,
+      loop: false,
+      nav:true,
+          navText: [
+              '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+              '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+          ]
+      ,
+      responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 4 }
+      }
+  });
+
     /*$('.modal-video').on('hidden.bs.modal', function() {
         var $this = $(this).find('iframe'),
             tempSrc = $this.attr('src');
