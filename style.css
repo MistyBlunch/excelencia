@@ -2064,4 +2064,29 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     padding: 0;
     width: 93%;
   }
+  .areas-carousel .area-item {
+    padding: .5rem;
+  }
+  .areas-carousel .area-item .area {
+    font-size: 1.4rem;
+    line-height: 26px;
+    height: 120px;
+    width: 120px;
+    border-radius: 8px;
+  }
+  .areas-carousel .owl-nav {
+    top: 0;
+  }
+  .areas-carousel .owl-nav .owl-prev i,
+  .areas-carousel .owl-nav .owl-next i {
+    font-size: 1.8rem;
+  }
+  .areas-carousel .owl-nav .owl-prev{
+    top: 50px;
+    left: -5px;
+  }
+  .areas-carousel .owl-nav .owl-next{
+    top: 50px;
+    right: -5px;
+  }
 }
