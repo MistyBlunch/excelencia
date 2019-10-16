@@ -534,6 +534,9 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   align-items: center;
   border-radius: 20px;
 }
+.areas-carousel .area-item .area:hover{
+  background-color: #222222 !important;
+}
 .areas-carousel .owl-nav{
   position: absolute;
   top: 20%;
