@@ -526,6 +526,9 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   color: #ffffff;
   text-transform: uppercase;
 }
+.areas-carousel .area-item .area a strong{
+  font-family: "Flexo-Bold", sans-serif;
+}
 .areas-carousel .area-item .area{
   font-size: 2.3rem;
   line-height: 45px;
