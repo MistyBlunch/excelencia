@@ -514,6 +514,9 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   border-color: #ff5100 !important;
 }
 /* Areas */
+.areas-carousel .owl-stage{
+  margin: auto;
+}
 .areas-carousel .area-item{
   padding: 1rem;
   text-align: center;
