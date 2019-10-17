@@ -398,7 +398,7 @@ function getAreas(){
     $args = array(
         'post_type' => 'area',
         'posts_per_page' => 10,
-        'orderby'=> 'rand'
+        'order' => 'ASC'
     );
     $row = new WP_Query($args);
     $data = $row->get_posts();

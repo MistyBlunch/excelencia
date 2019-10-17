@@ -532,7 +532,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   display: flex;
   justify-content:center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 0;
 }
 .areas-carousel .area-item .area:hover{
   background-color: #222222 !important;
