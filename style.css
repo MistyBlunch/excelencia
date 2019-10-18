@@ -986,7 +986,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   padding: 2rem 0;
 }
-
+#services .card{
+  border-radius: 0;
+}
 #services .magazine{
   height: 385px;
 }
