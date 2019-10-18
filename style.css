@@ -2108,11 +2108,14 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     right: -5px;
   }
   .widget-banner-image .img-parent .caption-text-img {
-    padding: 0.5rem 0 5rem 0.5rem;
+    padding: 0.5rem 5rem 0 0.5rem;
     font-size: 12px;
   }
   .widget-banner-image .img-parent .caption-text-img .title-image{
     font-size: 1.2rem;
     margin-bottom: 10px;
+  }
+  #services .box-form h3{
+    font-size: 17px;
   }
 }
