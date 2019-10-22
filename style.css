@@ -295,15 +295,25 @@ h6 {
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
-/*.container-indicators{
+.widget-banner-image .img-parent{
+  position: relative;
+  display: inline-block;
+}
+.widget-banner-image .img-parent .caption-text-img{
   position: absolute;
-  bottom: 0;
-  z-index: 14;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
-}*/
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 15rem;
+  color: #000;
+}
+.widget-banner-image .img-parent .caption-text-img .title-image{
+  text-transform: uppercase;
+  color: #000000;
+}
+
 .carousel-indicators{
   position: absolute;
   margin: 0;
@@ -978,7 +988,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
   padding: 2rem 0;
 }
-
+#services .card{
+  border-radius: 0;
+}
 #services .magazine{
   height: 385px;
 }
@@ -2098,5 +2110,16 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   .areas-carousel .owl-nav .owl-next{
     top: 50px;
     right: -5px;
+  }
+  .widget-banner-image .img-parent .caption-text-img {
+    padding: 0.5rem 5rem 0 0.5rem;
+    font-size: 12px;
+  }
+  .widget-banner-image .img-parent .caption-text-img .title-image{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  #services .box-form h3{
+    font-size: 17px;
   }
 }
