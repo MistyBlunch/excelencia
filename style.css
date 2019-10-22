@@ -758,7 +758,9 @@ body.mobile-nav-active #mobile-nav {
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
-
+.elementor-widget-tabs .elementor-tab-content{
+  font-family: 'Flexo-Light', sans-serif !important;
+}
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/

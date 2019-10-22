@@ -421,7 +421,6 @@ function orderDate($a, $b){
     return strtotime($a['date_event'] - $b['date_event']);
 }
 
-
 function getEvents(){
     $args = array(
         'post_type' => 'event',
