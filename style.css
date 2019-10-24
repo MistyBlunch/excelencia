@@ -774,6 +774,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 .elementor-widget-tabs .elementor-tab-content{
   font-family: 'Flexo-Light', sans-serif !important;
 }
+.elementor-tabs-wrapper.fixed-tabs {
+  background-color: #FFF;
+  position: fixed;
+  z-index: 999;
+  top: 163px;
+  width: 1119px;
+  display: inline-block;
+}
+.elementor-tab-content {
+  border: none !important;
+}
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -2124,5 +2135,15 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   }
   #services .box-form h3{
     font-size: 17px;
+  }
+  .elementor-tabs-wrapper.fixed-tabs {
+    background-color: #FFF;
+    position: initial;
+    z-index: 0;
+    top: inherit;
+    width: initial;
+  }
+  .elementor-tab-content {
+    border: 1px solid #d4d4d4 !important
   }
 }

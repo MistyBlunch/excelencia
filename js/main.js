@@ -14,8 +14,10 @@
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
+      $('.elementor-tabs-wrapper').addClass('fixed-tabs');
     } else {
       $('.back-to-top').fadeOut('slow');
+        $('.elementor-tabs-wrapper').removeClass('fixed-tabs');
     }
   });
   $('.back-to-top').click(function(){
