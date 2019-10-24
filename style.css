@@ -777,8 +777,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .elementor-tabs-wrapper.fixed-tabs {
   background-color: #FFF;
   position: fixed;
-  z-index: 999;
-  top: 163px;
+  z-index: 2;
+  top: 140px;
   width: 1119px;
   display: inline-block;
 }
