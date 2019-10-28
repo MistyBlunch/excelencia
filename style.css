@@ -47,14 +47,14 @@ body {
 }
 
 a {
-  color: #017afd;
+  color: #7d1c21;
   transition: 0.5s;
 }
 
 a:hover,
 a:active,
 a:focus {
-  color: #017afd;
+  color: #3e0306;
   outline: none;
   text-decoration: none;
 }
@@ -924,18 +924,87 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 1.5rem 0;
   position: relative;
 }
-
-/* #about::before {
+.navigation{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 1px dotted #ddd;
+}
+.nav-box.previous .media img,
+.nav-box.next .media img
+{
+  border-radius: 5px;
+}
+.nav-box.previous .media-body{
+  padding: 1rem;
+}
+.nav-box .media-body a{
+  font-weight: bold;
+}
+.nav-box.next .media-body{
+  padding: 1rem;
+  text-align: right;
+}
+.popular-posts-wrapper{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.popular-posts-wrapper .post{
+  display: inline-block;
+  padding-bottom: .8rem;
+  padding-top: .8rem;
+  border-bottom: 1px solid #ddd;
+}
+.popular-posts-wrapper .post h5{
+  font-size: 16px;
+}
+.popular-posts-wrapper .post:last-child{
+  border: none;
+}
+.sidebar{
+  background-color: #f7f7f7;
+  padding: 1.5rem;
+}
+.sidebar select{
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.sidebar .widget-title {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+.widget_tag_cloud .tagcloud a{
+  background: transparent;
+  color: #7d1c2e;
+  padding: 7px 16px 5px;
+  margin: 4px 8px 4px 0;
+  border: 1px solid #7d1c2e;
+  border-radius: 50px;
+  font-size: 14px !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.widget_tag_cloud .tagcloud:after{
   content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.92);
-  z-index: 9;
-} */
-
+  display: table;
+  clear: both;
+}
+.widget_tag_cloud .tagcloud a:hover{
+  background:#7d1c2e;
+  color: #FFF;
+}
 #about .container {
   position: relative;
   z-index: 10;

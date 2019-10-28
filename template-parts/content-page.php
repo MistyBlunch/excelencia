@@ -21,6 +21,8 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'excellence' ),
 				'after'  => '</div>',
 			) );
+
+
 		?>
 
 	</div><!-- .entry-content -->

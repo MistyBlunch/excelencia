@@ -561,6 +561,17 @@ register_sidebar( array(
     'after_title'   => '</h3>',
 ) );
 
+register_sidebar(
+    array(
+        'name'          => esc_html__( 'Sidebar', 'excellence' ),
+        'id'            => 'sidebar-1',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    )
+);
+
 if ( ! function_exists( 'excellence_the_excerpt' ) ) :
 
     /**
@@ -599,7 +610,20 @@ if ( ! function_exists( 'excellence_the_excerpt' ) ) :
     }
 
 endif;
+
 /**
  * Include default theme options.
  */
 require get_template_directory() . '/inc/customizer/default.php';
+
+/* --------------------------------------------------------------
+	   Theme Widgets
+-------------------------------------------------------------- */
+
+function excellence_widgets_init() {
+    register_widget( 'Sparkling_Popular_Posts' );
+}
+add_action( 'widgets_init', 'excellence_widgets_init' );
+
+
+require_once( get_template_directory() . '/inc/widgets/class-sparkling-popular-posts.php' );
