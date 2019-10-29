@@ -12,7 +12,7 @@
                             <h2><?php the_title() ?></h2>
                         </div>
                         <div class="sub-title">
-                            <h4>Sub title</h4>
+                            <h4><?php the_excerpt(); ?></h4>
                         </div>
                         <?php
                             the_content();
