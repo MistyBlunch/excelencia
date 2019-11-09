@@ -1414,7 +1414,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 }
 #clients .event-list{
   list-style: none;
-  padding: 10px 5px;
+  padding: 10px 1.5rem;
 }
 #clients .event{
   display: block;
@@ -1494,7 +1494,40 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 #clients .owl-dot.active {
   background-color:#116aaf;
 }
-
+.clients-carousel .owl-nav {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+.clients-carousel .owl-nav {
+  top: 0;
+}
+.clients-carousel .owl-nav .owl-prev i,
+.clients-carousel .owl-nav .owl-next i {
+  font-size: 1.8rem;
+}
+.clients-carousel .owl-nav .owl-prev{
+  top: 50px;
+  left: -5px;
+}
+.clients-carousel .owl-nav .owl-next{
+  top: 50px;
+  right: -5px;
+}
+.clients-carousel .owl-nav .owl-prev,
+.clients-carousel .owl-nav .owl-next {
+  position: absolute;
+  height: 100px;
+  color: inherit;
+  background: none;
+  border: none;
+  z-index: 100;
+}
+.clients-carousel .owl-nav .owl-prev.disabled,
+.clients-carousel .owl-nav .owl-next.disabled{
+  opacity: .3;
+}
 #fbmsg .wp-sheet{
   height: 50% !important;
 }

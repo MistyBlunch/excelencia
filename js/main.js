@@ -97,13 +97,21 @@
     portfolioIsotope.isotope({ filter: $(this).data('filter') });
   });
 
-  // Clients carousel (uses the Owl Carousel library)
+  // Events carousel (uses the Owl Carousel library)
   $(".clients-carousel").owlCarousel({
     autoplay: false,
-    dots: true,
+    dots: false,
     loop: false,
-    responsive: { 0: { items: 1 }, 768: { items: 4 }, 900: { items: 4 }
-    }
+    responsive: {
+        0: { items: 1 },
+        768: { items: 4 },
+        900: { items: 4 }
+    },
+    nav:true,
+    navText: [
+      '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+      '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+    ]
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
