@@ -422,6 +422,8 @@ function orderDate($a, $b){
 }
 
 function getEvents(){
+    $serveDate = new DateTime();
+    $currentDate = $serveDate->format('d-m-Y');
     $args = array(
         'post_type' => 'event',
         'posts_per_page' => 10,
@@ -430,32 +432,36 @@ function getEvents(){
     $data = $row->get_posts();
     $post = null;
     foreach ($data as $item){
-        $tmp['ID'] = $item->ID;
-        $tmp['post_author'] = $item->post_author;
-        $tmp['post_date'] = $item->post_date;
-        $tmp['post_title'] = $item->post_title;
-        $tmp['post_content'] = $item->post_content;
-        $tmp['post_type'] = $item->post_type;
         $date = new DateTime(get_post_meta($item->ID,'date_event', true));
-        $tmp['event_day'] = $date->format('d');
-        $tmp['event_month'] = $date->format('M');
-        $tmp['event_year'] = $date->format('Y');
-        $tmp['post_event_date'] = $date->format('D, d M Y');
-        $tmp['date_event'] = $date->format('d-m-Y');
-        $tmp['post_event_place'] = get_post_meta($item->ID,'event_place', true);
-        $tmp['post_date_text'] = get_post_meta($item->ID,'date_in_text', true);
-        $tmp['post_url_landing'] = get_post_meta($item->ID,'url_landing_page', true);
-        $thumbID = get_post_thumbnail_id($item->ID);
-        $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
-        $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
-        $categories = get_the_terms($item->ID,['category_event']);
-        $categorySlug = $categories[0]->slug;
-        $tmp['category_slug'] = $categorySlug;
-        $tmp['category_name'] = $categories[0]->name;
-        $tmp['category_color'] = getColorCategoryEvent($categorySlug);
-        $post[] = $tmp;
-    }
+        $eventDate = $date->format('d-m-Y');
+        //Verificamos si el eventos es mayor a la fecha actual, entonces se visualiza
+        if(strtotime($eventDate) >= strtotime($currentDate)){
+            $tmp['ID'] = $item->ID;
+            $tmp['post_author'] = $item->post_author;
+            $tmp['post_date'] = $item->post_date;
+            $tmp['post_title'] = $item->post_title;
+            $tmp['post_content'] = $item->post_content;
+            $tmp['post_type'] = $item->post_type;
 
+            $tmp['event_day'] = $date->format('d');
+            $tmp['event_month'] = $date->format('M');
+            $tmp['event_year'] = $date->format('Y');
+            $tmp['post_event_date'] = $date->format('D, d M Y');
+            $tmp['date_event'] = $eventDate;
+            $tmp['post_event_place'] = get_post_meta($item->ID,'event_place', true);
+            $tmp['post_date_text'] = get_post_meta($item->ID,'date_in_text', true);
+            $tmp['post_url_landing'] = get_post_meta($item->ID,'url_landing_page', true);
+            $thumbID = get_post_thumbnail_id($item->ID);
+            $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
+            $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
+            $categories = get_the_terms($item->ID,['category_event']);
+            $categorySlug = $categories[0]->slug;
+            $tmp['category_slug'] = $categorySlug;
+            $tmp['category_name'] = $categories[0]->name;
+            $tmp['category_color'] = getColorCategoryEvent($categorySlug);
+            $post[] = $tmp;
+        }
+    }
 
     usort($post, function($a1, $a2) {
         $v1 = strtotime($a1['date_event']);
