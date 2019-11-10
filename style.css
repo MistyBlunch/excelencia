@@ -1528,8 +1528,8 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 .clients-carousel .owl-nav .owl-next.disabled{
   opacity: .3;
 }
-.clients-carousel .owl-stage-outer .owl-carousel .owl-stage{
-  margin: auto;
+.owl-carousel .owl-stage{
+  margin: auto !important;
 }
 #fbmsg .wp-sheet{
   height: 50% !important;
