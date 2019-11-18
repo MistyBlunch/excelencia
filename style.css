@@ -2031,6 +2031,12 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   text-decoration: none;
   background-color: #795548;
 }
+.ssb_inline-share_heading {
+  font-weight: bold;
+  font-size: 16px;
+  border-top: 1px dotted #ddd;
+  padding: 10px 0;
+}
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
