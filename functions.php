@@ -417,6 +417,29 @@ function getAreas(){
     return  $post;
 }
 
+function getWathsapp(){
+    $args = array(
+        'post_type' => 'area',
+        'posts_per_page' => 10,
+        'order' => 'ASC'
+    );
+    $row = new WP_Query($args);
+    $data = $row->get_posts();
+    $post = null;
+    foreach ($data as $item){
+        $tmp['ID'] = $item->ID;
+        $tmp['area_name'] = $item->post_title;
+        $tmp['area_wathsapp'] = get_post_meta($item->ID,'area_whatsapp', true);
+        $tmp['area_color'] = get_post_meta($item->ID,'area_color', true);
+        $display = get_post_meta($item->ID,'area_view', true);
+        $view = ($display === 'true' ? $view = true : $view = false);
+        $tmp['area_view'] = $view;
+
+        $post[] = $tmp;
+    }
+    return  $post;
+}
+
 function orderDate($a, $b){
     return strtotime($a['date_event'] - $b['date_event']);
 }

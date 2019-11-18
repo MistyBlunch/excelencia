@@ -92,6 +92,11 @@
     </div>
 </footer><!-- #footer -->
 <!-- Modal Wathsapp -->
+<?php
+
+$phones = getWathsapp();
+
+?>
 <div class="modal fade" id="modalWathsapp" tabindex="-1" role="dialog" aria-labelledby="modalWathsappTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -106,20 +111,17 @@
             <div class="modal-body">
                 <h3>¿En qué producto estás interesado?</h3>
                 <p>(Solo para consultas de información)</p>
+                <?php if($phones): ?>
                 <ul>
-                    <li>
-                        <a href="https://wa.me/51962187672"  target="_blank" title="Secretarias"> Secretarias </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/51991121021"  target="_blank" title="Trabajo Social"> Trabajo Social</a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/51959480897"  target="_blank" title="Recursos Humanos"> Recursos Humanos </a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/51959389697"  target="_blank" title="Educación"> Educación </a>
-                    </li>
+                    <?php foreach ($phones as $phone) : ?>
+                        <?php if (!empty($phone['area_wathsapp']) && $phone['area_view']) : ?>
+                            <li>
+                                <a href="https://wa.me/<?php echo $phone['area_wathsapp'] ?>"  target="_blank" title="<?php echo $phone['area_name'] ?>"> <?php echo $phone['area_name'] ?> </a>
+                            </li>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
                 </ul>
+                <?php endif; ?>
             </div>
         </div>
     </div>

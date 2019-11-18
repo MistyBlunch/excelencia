@@ -8,6 +8,7 @@ $areas = getAreas();
 $testimony = getTestimony();
 $events = getEvents();
 
+
 ?>
 <!--==========================
   Intro Section
