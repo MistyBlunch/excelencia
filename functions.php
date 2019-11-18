@@ -571,7 +571,7 @@ register_sidebar(
     array(
         'name'          => esc_html__( 'Sidebar', 'excellence' ),
         'id'            => 'sidebar-1',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s clase-categoria-especial">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',

@@ -118,11 +118,14 @@
                         <?php echo get_theme_mod('cd_phone_contact'); ?>
                     </div>
                 <?php } ?>
+                <div class="wathsapp-number">
+                    <button type="button" class="btn btn-primary btn-wathsapp" data-toggle="modal" data-target="#modalWathsapp">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/whatsapp.svg" width="32px" height="32px" />
+                    </button>
+                </div>
             </nav>
         </div>
     </div>
-
-
     <div class="menu-top">
         <div class="container">
             <nav class="navbar navbar-expand-md navbar-dark">

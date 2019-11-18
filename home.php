@@ -168,7 +168,11 @@ $events = getEvents();
 
       <?php } ?>
 
-      <?php if (get_theme_mod('cd_display_events') == 1 ) { ?>
+      <?php if (get_theme_mod('cd_display_events') == 1 ) {
+
+          if(!empty($events)){
+
+          ?>
 
       <!--==========================
       Area de Eventos
@@ -204,7 +208,11 @@ $events = getEvents();
       </div>
     </section><!-- #clients -->
 
-      <?php } ?>
+      <?php
+          }
+      }
+      
+      ?>
 
       <?php if (get_theme_mod('cd_display_notice') == 1 ) { ?>
     <!--==========================

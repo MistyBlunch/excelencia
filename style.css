@@ -287,10 +287,13 @@ h6 {
 }
 .phone-number{
   display: inline-block;
-  padding: 0 2rem;
+  padding: 0 .5rem;
   color:#ffffff;
   font-weight: bold;
   font-size: 14px;
+}
+.wathsapp-number{
+  display: inline-block;
 }
 /*--------------------------------------------------------------
 # Intro Section
@@ -1534,6 +1537,67 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 #fbmsg .wp-sheet{
   height: 50% !important;
 }
+.btn-wathsapp{
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.btn-wathsapp:hover{
+  background: transparent;
+  border: none;
+}
+#modalWathsapp .modal-content{
+  background-color: #c82033;
+  border: none;
+  border-radius: 0;
+}
+#modalWathsapp .modal-content .modal-title{
+  color: #FFF;
+}
+#modalWathsapp .modal-body{
+  text-align: center;
+  color: #FFF;
+}
+#modalWathsapp .modal-content .modal-body p {
+  font-size: 18px;
+}
+#modalWathsapp .modal-content .modal-header button svg {
+  width: 15px;
+}
+#modalWathsapp .modal-content .modal-header button svg path {
+  fill: #FFF;
+}
+#modalWathsapp .modal-content .modal-body ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  justify-content: center;
+  padding: 40px 0 60px 0;
+  border-bottom: 3px solid #FFF;
+}
+#modalWathsapp .modal-content .modal-body ul li {
+  margin: 0 12px;
+}
+#modalWathsapp .modal-content .modal-body ul li a {
+  color: #c82033;
+  background-color: #FFF;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 8px 20px;
+  display: inline-block;
+}
+#modalWathsapp .modal-content .modal-body h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: .7rem;
+}
+#modalWathsapp .modal-content .modal-header {
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center;
+  border: 0 none;
+  z-index: 10;
+}
 /* Testimonials Section
 --------------------------------*/
 
@@ -2256,5 +2320,13 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   }
   .elementor-tab-content {
     border: 1px solid #d4d4d4 !important
+  }
+  #modalWathsapp .modal-content .modal-body ul{
+    display: inline-block;
+    width: 100%;
+  }
+  #modalWathsapp .modal-content .modal-body ul li a{
+    width: 100%;
+    margin-bottom: .7rem;
   }
 }
