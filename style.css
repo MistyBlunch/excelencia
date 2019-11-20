@@ -1761,6 +1761,14 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   margin: 0 2px;
 }
 
+.wps-footer{
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  z-index: 11;
+  bottom: 65px;
+  right: 11px;
+}
 /* Contact Section
 --------------------------------*/
 

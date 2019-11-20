@@ -127,6 +127,13 @@ $phones = getWathsapp();
     </div>
 </div>
 
+<div class="wps-footer">
+    <button type="button" class="btn btn-primary btn-wathsapp" data-toggle="modal" data-target="#modalWathsapp">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/whatsapp.svg" width="44px" height="44px" />
+    </button>
+</div>
+
+
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 <!-- Uncomment below i you want to use a preloader -->
 <!-- <div id="preloader"></div> -->

@@ -14,9 +14,11 @@
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
+      $('.wps-footer').fadeIn('slow');
       $('.elementor-tabs-wrapper').addClass('fixed-tabs');
     } else {
       $('.back-to-top').fadeOut('slow');
+        $('.wps-footer').fadeOut('slow');
         $('.elementor-tabs-wrapper').removeClass('fixed-tabs');
     }
   });
