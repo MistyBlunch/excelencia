@@ -20,6 +20,17 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700,800&display=swap" rel="stylesheet">
     <!-- Libraries CSS Files -->
     <?php wp_head(); ?>
+    <!-- Codigo de Seguimiento de Google Analitys -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152949474-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-152949474-1');
+    </script>
+
 </head>
 
 <style type="text/css">
