@@ -781,7 +781,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #FFF;
   position: fixed;
   z-index: 2;
-  top: 140px;
+  top: 160px;
   width: 1119px;
   display: inline-block;
 }
@@ -2342,5 +2342,23 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #modalWathsapp .modal-content .modal-body ul li a{
     width: 100%;
     margin-bottom: .7rem;
+  }
+  .elementor-tabs .elementor-tab-content{
+    padding: 0 !important;
+    border: none !important;
+  }
+  .elementor-tabs-content-wrapper .elementor-tab-title{
+    display: none;
+  }
+  .elementor-tabs .elementor-tabs-wrapper {
+    display: inline-block !important;
+  }
+  .elementor-widget-tabs .elementor-tab-desktop-title{
+    padding: 10px !important;
+  }
+  .elementor-tabs-wrapper.fixed-tabs{
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 10;
   }
 }
