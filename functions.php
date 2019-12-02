@@ -283,7 +283,7 @@ add_action( 'init', 'excellence_events_post_type' );
  */
 function excellence_testimony_post_type() {
     $labels = array(
-        'name'               => __( 'Testimonios' ),
+        'name'               => __( 'Video Testimonio' ),
         'singular_name'      => __( 'Testimonio' ),
         'add_new'            => __( 'Agregar testimonio' ),
         'add_new_item'       => __( 'Agregar testimonio' ),
@@ -313,6 +313,79 @@ function excellence_testimony_post_type() {
     register_post_type( 'testimony', $args );
 }
 add_action( 'init', 'excellence_testimony_post_type' );
+
+
+/**
+ * Registers the recommendation post type.
+ */
+function excellence_recommend_post_type() {
+    $labels = array(
+        'name'               => __( 'Recomendación' ),
+        'singular_name'      => __( 'Recomendación' ),
+        'add_new'            => __( 'Agregar Recomendación' ),
+        'add_new_item'       => __( 'Agregar Recomendación' ),
+        'edit_item'          => __( 'Editar Recomendación' ),
+        'new_item'           => __( 'Agregar Recomendación' ),
+        'view_item'          => __( 'Visualizar Recomendación' ),
+        'search_items'       => __( 'Buscar Recomendación' ),
+        'not_found'          => __( 'No se encontro recomendación' ),
+        'not_found_in_trash' => __( 'No se encontro recomendación en la papelera' )
+    );
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'revisions',
+    );
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'recommend' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-admin-comments',
+    );
+    register_post_type( 'recommend', $args );
+}
+add_action( 'init', 'excellence_recommend_post_type' );
+
+/**
+ * Registers the clients post type.
+ */
+function excellence_clients_post_type() {
+    $labels = array(
+        'name'               => __( 'Clientes' ),
+        'singular_name'      => __( 'Cliente' ),
+        'add_new'            => __( 'Agregar Cliente' ),
+        'add_new_item'       => __( 'Agregar Cliente' ),
+        'edit_item'          => __( 'Editar Cliente' ),
+        'new_item'           => __( 'Agregar Cliente' ),
+        'view_item'          => __( 'Visualizar Cliente' ),
+        'search_items'       => __( 'Buscar Cliente' ),
+        'not_found'          => __( 'No se encontro cliente' ),
+        'not_found_in_trash' => __( 'No se encontro cliente en la papelera' )
+    );
+    $supports = array(
+        'title',
+        'editor',
+        'thumbnail',
+        'revisions',
+    );
+    $args = array(
+        'labels'               => $labels,
+        'supports'             => $supports,
+        'public'               => true,
+        'capability_type'      => 'post',
+        'rewrite'              => array( 'slug' => 'client' ),
+        'has_archive'          => true,
+        'menu_position'        => 30,
+        'menu_icon'            => 'dashicons-admin-comments',
+    );
+    register_post_type( 'client', $args );
+}
+add_action( 'init', 'excellence_clients_post_type' );
 
 function getSlider($terms){
     $args = array(
@@ -491,8 +564,6 @@ function getEvents(){
         $v2 = strtotime($a2['date_event']);
         return $v1 - $v2; // $v2 - $v1 to reverse direction
     });
-
-
 
     return  $post;
 }
