@@ -381,7 +381,7 @@ function excellence_clients_post_type() {
         'rewrite'              => array( 'slug' => 'client' ),
         'has_archive'          => true,
         'menu_position'        => 30,
-        'menu_icon'            => 'dashicons-admin-comments',
+        'menu_icon'            => 'dashicons-buddicons-buddypress-logo',
     );
     register_post_type( 'client', $args );
 }
