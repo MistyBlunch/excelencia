@@ -441,10 +441,66 @@ function getSlider($terms){
     return  $post;
 }
 
-function getTestimony(){
+function getRecommend($title, $cant = 6){
+    $args = array(
+        'post_type' => 'recommend',
+        'posts_per_page' => $cant,
+        'orderby' => 'rand',
+    );
+    $row = new WP_Query($args);
+    $data = $row->get_posts();
+    $post = null;
+    foreach ($data as $item) {
+        $tmp['ID'] = $item->ID;
+        $tmp['post_author'] = $item->post_author;
+        $tmp['post_date'] = $item->post_date;
+        $tmp['post_title'] = $item->post_title;
+        $tmp['post_content'] = $item->post_content;
+        $tmp['post_position'] = get_post_meta($item->ID,'recommend_position', true);
+        $tmp['post_facebook'] = get_post_meta($item->ID,'recommend_facebook', true);
+        $tmp['post_twitter'] = get_post_meta($item->ID,'recommend_twitter', true);
+        $tmp['post_linkedin'] = get_post_meta($item->ID,'recommend_linkedin', true);
+        $thumbID = get_post_thumbnail_id($item->ID);
+        $tmp['image_thumbnail'] = wp_get_attachment_image_src( $thumbID, 'thumbnail' );
+        $tmp['image_full'] = wp_get_attachment_image_src( $thumbID, 'full' );
+        $post[] = $tmp;
+    }
+    ?>
+    <section id="recommends" class="section-bg wow fadeInUp">
+        <div class="container">
+            <header class="section-header">
+                <h3><?php echo $title; ?></h3>
+            </header>
+            <div class="owl-carousel recommend-carousel">
+                <?php foreach ($post as $item) { ?>
+                    <div class="recommend-item">
+                        <div class="avatar">
+                            <img width="100px" src="<?php echo $item['image_full'][0]; ?>" class="rounded-circle" alt="<?php echo $item['post_title']; ?>">
+                        </div>
+                        <h4 class="title"><?php echo $item['post_title']; ?></h4>
+                        <div class="description">
+                            <?php echo $item['post_content']; ?>
+                        </div>
+                        <div class="position">
+                            <?php echo $item['post_position']; ?>
+                        </div>
+                        <ul class="social">
+                            <li><a href="<?php echo $item['post_facebook']; ?>">Facebook</a></li>
+                            <li><a href="<?php echo $item['post_facebook']; ?>">Twitter</a></li>
+                            <li><a href="<?php echo $item['post_linkedin']; ?>">Linkedin</a></li>
+                        </ul>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+    <?php
+}
+
+function getTestimony($title, $cant = 6, $html = false){
     $args = array(
         'post_type' => 'testimony',
-        'posts_per_page' => 6,
+        'posts_per_page' => $cant,
         'orderby'=> 'rand'
     );
     $row = new WP_Query($args);
@@ -464,8 +520,60 @@ function getTestimony(){
         $tmp['url_video'] = get_post_meta($item->ID,'url_video', true);
         $post[] = $tmp;
     }
-    return  $post;
+
+    if($html){
+       ?>
+        <section id="testimonials" class="section-bg wow fadeInUp">
+        <div class="container">
+            <header class="section-header">
+                <h3><?php echo $title; ?></h3>
+            </header>
+            <div class="owl-carousel testimonials-carousel">
+                <?php foreach ($post as $item){ ?>
+                    <div class="testimonial-item">
+                        <div id="video-<?php echo $item['ID'] ?>" class="video-item" data-title="<?php echo $item['post_title'] ?> - <?php echo $item['post_description'] ?>"
+                             data-toggle="modal" data-src="<?php echo $item['url_video'] ?>"
+                             data-target="#modal-video">
+                            <div class="video">
+                                <div class="velo"></div>
+                                <img src="<?php echo $item['image_full'][0] ?>" class="img-fluid" alt="<?php echo $item['post_title'] ?>">
+                                <i class="fa fa-play" aria-hidden="true"></i>
+                            </div>
+                            <div class="video-content">
+                                <p class="name"><?php echo $item['post_title'] ?></p>
+                                <p class="description"><?php echo $item['post_description'] ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+
+        <div class="modal fade modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-label"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <?php
+    } else {
+        return $post;
+    }
 }
+
 
 function getAreas(){
     $args = array(

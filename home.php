@@ -5,7 +5,6 @@
 get_header();
 $sliders = getSlider('home');
 $areas = getAreas();
-$testimony = getTestimony();
 $events = getEvents();
 
 
@@ -326,64 +325,12 @@ $events = getEvents();
       </section><!-- #publications -->
     <?php } ?>
 
-      <?php if (get_theme_mod('cd_display_testimony') == 1 ) { ?>
-    <!--==========================
-      Clients Section
-    ============================-->
-    <section id="testimonials" class="section-bg wow fadeInUp">
-      <div class="container">
+<?php
+    if (get_theme_mod('cd_display_testimony') == 1 ) {
+        getTestimony('Testimonio de nuestros clientes', 6,true);
+    }
+?>
 
-        <header class="section-header">
-          <h3>Testimonios de nuestros clientes</h3>
-        </header>
-
-        <div class="owl-carousel testimonials-carousel">
-            <?php foreach ($testimony as $item){ ?>
-              <div class="testimonial-item">
-                <div id="video-<?php echo $item['ID'] ?>" class="video-item" data-title="<?php echo $item['post_title'] ?> - <?php echo $item['post_description'] ?>"
-                     data-toggle="modal" data-src="<?php echo $item['url_video'] ?>"
-                     data-target="#modal-video">
-                  <div class="video">
-                    <div class="velo"></div>
-                      <img src="<?php echo $item['image_full'][0] ?>" class="img-fluid" alt="<?php echo $item['post_title'] ?>">
-                    <i class="fa fa-play" aria-hidden="true"></i>
-                  </div>
-                  <div class="video-content">
-                    <p class="name"><?php echo $item['post_title'] ?></p>
-                    <p class="description"><?php echo $item['post_description'] ?></p>
-                  </div>
-                </div>
-              </div>
-            <?php } ?>
-
-        </div>
-
-      </div>
-    </section><!-- #testimonials -->
-
-        <div class="modal fade modal-video" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modal-label"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                  </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      <?php }?>
-
-
-   
   </main>
 
 <?php  get_footer(); ?>

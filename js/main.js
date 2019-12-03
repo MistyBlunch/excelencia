@@ -116,6 +116,23 @@
     ]
   });
 
+    // Recommend carousel
+    $(".recommend-carousel").owlCarousel({
+        autoplay: false,
+        dots: false,
+        loop: false,
+        responsive: {
+            0: { items: 1 },
+            768: { items: 3 },
+            900: { items: 3 }
+        },
+        nav:true,
+        navText: [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ]
+    });
+
   // Testimonials carousel (uses the Owl Carousel library)
   $(".testimonials-carousel").owlCarousel({
     autoplay: false,
@@ -139,13 +156,6 @@
       responsive: { 0: { items: 2 }, 768: { items: 4 }, 900: { items: 4 }
       }
   });
-
-    /*$('.modal-video').on('hidden.bs.modal', function() {
-        var $this = $(this).find('iframe'),
-            tempSrc = $this.attr('src');
-        $this.attr('src', "");
-        $this.attr('src', tempSrc);
-    });*/
 
     var $videoSrc, $videoTitle;
 

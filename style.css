@@ -1072,8 +1072,43 @@ body.mobile-nav-active #mobile-nav-toggle {
   z-index: 2;
 }
 
-/* Services Section
---------------------------------*/
+/* Recommend */
+.recommend-carousel .owl-item .avatar{
+  text-align: center;
+}
+.recommend-carousel .owl-item .avatar img{
+  display: inline-block;
+  width: 100px;
+}
+.recommend-carousel .owl-item .title{
+  text-align: center;
+  font-size: 18px;
+  margin-top: 1rem;
+}
+.recommend-carousel .owl-item .description{
+  font-size: 14px;
+  text-align: center;
+}
+.recommend-carousel .owl-item .position{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 0;
+  color: #d60000;
+}
+.recommend-carousel .owl-item .social{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+.recommend-carousel .owl-item .social li{
+  display: inline-block;
+}
+  /* Services Section
+  --------------------------------*/
 
 #services {
   background: #fff;
