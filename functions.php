@@ -120,6 +120,13 @@ function excellence_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'excellence_scripts' );
 
+function remove_jquery_migrate_notice() {
+    $m= $GLOBALS['wp_scripts']->registered['jquery-migrate'];
+    $m->extra['before'][]='temp_jm_logconsole = window.console.log; window.console.log=null;';
+    $m->extra['after'][]='window.console.log=temp_jm_logconsole;';
+}
+add_action( 'init', 'remove_jquery_migrate_notice', 5 );
+
 /**
  * Custom template tags for this theme.
  */
@@ -354,7 +361,7 @@ add_action( 'init', 'excellence_recommend_post_type' );
 /**
  * Registers the clients post type.
  */
-function excellence_clients_post_type() {
+/*function excellence_clients_post_type() {
     $labels = array(
         'name'               => __( 'Clientes' ),
         'singular_name'      => __( 'Cliente' ),
@@ -385,7 +392,7 @@ function excellence_clients_post_type() {
     );
     register_post_type( 'client', $args );
 }
-add_action( 'init', 'excellence_clients_post_type' );
+add_action( 'init', 'excellence_clients_post_type' );*/
 
 function getSlider($terms){
     $args = array(
@@ -466,7 +473,7 @@ function getRecommend($title, $cant = 6){
         $post[] = $tmp;
     }
     ?>
-    <section id="recommends" class="section-bg wow fadeInUp">
+    <section id="recommends" class="section-bg">
         <div class="container">
             <header class="section-header">
                 <h3><?php echo $title; ?></h3>
@@ -485,9 +492,21 @@ function getRecommend($title, $cant = 6){
                             <?php echo $item['post_position']; ?>
                         </div>
                         <ul class="social">
-                            <li><a href="<?php echo $item['post_facebook']; ?>">Facebook</a></li>
-                            <li><a href="<?php echo $item['post_facebook']; ?>">Twitter</a></li>
-                            <li><a href="<?php echo $item['post_linkedin']; ?>">Linkedin</a></li>
+                            <li>
+                                <a href="<?php echo $item['post_facebook']; ?>">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $item['post_facebook']; ?>">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $item['post_linkedin']; ?>">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 <?php } ?>
@@ -523,7 +542,7 @@ function getTestimony($title, $cant = 6, $html = false){
 
     if($html){
        ?>
-        <section id="testimonials" class="section-bg wow fadeInUp">
+        <section id="testimonials" class="section-bg">
         <div class="container">
             <header class="section-header">
                 <h3><?php echo $title; ?></h3>

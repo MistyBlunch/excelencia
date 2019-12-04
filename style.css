@@ -771,12 +771,12 @@ body.mobile-nav-active #mobile-nav {
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
-.elementor *{
+/*.elementor *{
   font-family: 'Flexo-Light', sans-serif !important;
 }
 .elementor-widget-tabs .elementor-tab-content{
   font-family: 'Flexo-Light', sans-serif !important;
-}
+}*/
 .elementor-tabs-wrapper.fixed-tabs {
   background-color: #FFF;
   position: fixed;
@@ -1073,12 +1073,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* Recommend */
+.recommend-carousel .owl-item .recommend-item{
+  padding-top: 1.5rem;
+}
 .recommend-carousel .owl-item .avatar{
   text-align: center;
 }
 .recommend-carousel .owl-item .avatar img{
   display: inline-block;
   width: 100px;
+  border: 3px solid #bb2500;
 }
 .recommend-carousel .owl-item .title{
   text-align: center;
@@ -1106,6 +1110,45 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 .recommend-carousel .owl-item .social li{
   display: inline-block;
+  margin-right: 5px;
+}
+.recommend-carousel .owl-item .social li a{
+  color: #ffffff;
+  font-size: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #7d8898;
+  display: inline-block;
+  line-height: 32px;
+}
+.recommend-carousel .owl-nav {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+.recommend-carousel .owl-nav .owl-prev {
+  left: 0;
+  top: 45px;
+}
+.recommend-carousel .owl-nav .owl-next {
+  right: 0;
+  top: 45px;
+}
+.recommend-carousel .owl-nav .owl-prev,
+.recommend-carousel .owl-nav .owl-next {
+  position: absolute;
+  height: 100px;
+  color: inherit;
+  background: none;
+  border: none;
+  z-index: 100;
+}
+.recommend-carousel .owl-nav .owl-prev i,
+.recommend-carousel .owl-nav .owl-next i {
+  font-size: 2.5rem;
+  color: #cecece;
 }
   /* Services Section
   --------------------------------*/
