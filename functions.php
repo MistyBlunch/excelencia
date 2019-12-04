@@ -478,6 +478,11 @@ function getRecommend($title, $cant = 6){
             <header class="section-header">
                 <h3><?php echo $title; ?></h3>
             </header>
+            <div class="section-description">
+                La opinión de nuestros clientes es sin duda alguna la mejor prueba de nuestro buen hacer.
+                Por ello queremos mostrar algunos de los comentarios que, de forma totalmente espontánea,
+                nos han enviado nuestros clientes.
+            </div>
             <div class="owl-carousel recommend-carousel">
                 <?php foreach ($post as $item) { ?>
                     <div class="recommend-item">

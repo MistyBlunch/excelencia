@@ -1150,6 +1150,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 2.5rem;
   color: #cecece;
 }
+.section-description{
+  text-align: center;
+  padding: 1rem 0;
+}
   /* Services Section
   --------------------------------*/
 
