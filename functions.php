@@ -394,7 +394,7 @@ add_action( 'init', 'excellence_recommend_post_type' );
 }
 add_action( 'init', 'excellence_clients_post_type' );*/
 
-function getSlider($terms){
+    function getSlider($terms){
     $args = array(
         'post_type' => 'slide',
         'posts_per_page' => 6,
@@ -521,6 +521,8 @@ function getRecommend($title, $cant = 6){
     <?php
 }
 
+
+
 function getTestimony($title, $cant = 6, $html = false){
     $args = array(
         'post_type' => 'testimony',
@@ -598,6 +600,17 @@ function getTestimony($title, $cant = 6, $html = false){
     }
 }
 
+function shortcode_testimony($atts) {
+    $a = shortcode_atts( array(
+        'title' => 'world',
+        'cant' => 6
+    ), $atts );
+
+    $html = getTestimony($a['title'],$a['cant']);
+
+    return $html;
+}
+add_shortcode( 'testimony_display', 'shortcode_testimony' );
 
 function getAreas(){
     $args = array(
