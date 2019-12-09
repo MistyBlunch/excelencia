@@ -22,10 +22,7 @@ get_header();
         ?>
 
         <?php
-
-        getTestimony('Testimonios de nuestros clientes',6,true);
         getRecommend('Lo que dicen sobre nosotros', 6);
-
         ?>
 
 
