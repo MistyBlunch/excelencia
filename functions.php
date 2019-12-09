@@ -606,7 +606,7 @@ function shortcode_testimony($atts) {
         'cant' => 6
     ), $atts );
 
-    $html = getTestimony($a['title'],$a['cant']);
+    $html = getTestimony($a['title'],$a['cant'], true);
 
     return $html;
 }
