@@ -491,7 +491,9 @@ function getRecommend($title, $cant = 6){
                         </div>
                         <h4 class="title"><?php echo $item['post_title']; ?></h4>
                         <div class="description">
+                            <i class="fa fa-quote-left" id="ql"></i>
                             <?php echo $item['post_content']; ?>
+                            <i class="fa fa-quote-right" id="qr"></i>
                         </div>
                         <div class="position">
                             <?php echo $item['post_position']; ?>

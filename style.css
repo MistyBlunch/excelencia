@@ -1074,7 +1074,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Recommend */
 .recommend-carousel .owl-item .recommend-item{
-  padding-top: 1.5rem;
+  padding: 1.5rem 2rem;
 }
 .recommend-carousel .owl-item .avatar{
   text-align: center;
