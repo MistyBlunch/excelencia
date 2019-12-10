@@ -1093,6 +1093,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 14px;
   text-align: center;
 }
+.recommend-carousel .owl-item .description .fa{
+  color: #d6d6d6;
+}
 .recommend-carousel .owl-item .position{
   text-align: center;
   font-size: 14px;
