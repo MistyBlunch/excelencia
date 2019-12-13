@@ -126,7 +126,7 @@
                 <?php if(get_theme_mod('cd_phone_contact')) { ?>
                     <div class="phone-number">
                         <img src="<?php echo get_theme_mod('cd_country'); ?>" width="32px" />
-                        <?php echo get_theme_mod('cd_phone_contact'); ?>
+                        <a target="_blank" href="tel:<?php echo get_theme_mod('cd_phone_contact'); ?>"><?php echo get_theme_mod('cd_phone_contact'); ?></a>
                     </div>
                 <?php } ?>
                 <div class="wathsapp-number">

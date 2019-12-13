@@ -292,6 +292,9 @@ h6 {
   font-weight: bold;
   font-size: 14px;
 }
+.phone-number a{
+  color:#ffffff;
+}
 .wathsapp-number{
   display: inline-block;
 }
@@ -1619,15 +1622,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 #fbmsg .wp-sheet{
   height: 50% !important;
 }
-.btn-wathsapp{
-  border: none;
-  background: transparent;
-  padding: 0;
-}
-.btn-wathsapp:hover{
-  background: transparent;
-  border: none;
-}
+
 #modalWathsapp .modal-content{
   background-color: #c82033;
   border: none;
@@ -1848,8 +1843,20 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   width: 48px;
   height: 48px;
   z-index: 11;
-  bottom: 65px;
+  bottom: 120px;
   right: 11px;
+}
+.wps-footer .btn-wathsapp,
+.wathsapp-number .btn-wathsapp{
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-bottom: 5px;
+}
+.wps-footer .btn-wathsapp:hover,
+.wathsapp-number .btn-wathsapp:hover{
+  background: transparent;
+  border: none;
 }
 /* Contact Section
 --------------------------------*/
