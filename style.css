@@ -529,6 +529,63 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   background-color: #ff5100 !important;
   border-color: #ff5100 !important;
 }
+/** corporate **/
+.section-card {
+  padding: 70px 0 70px;
+  background: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+}
+.section-card .section-container{
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.section-card:before {
+  background: #374054;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  display: inherit !important;
+}
+.section-card .section-title{
+  text-align: center;
+  color: #ffffff;
+  display: inline-block;
+  width: 100%;
+}
+.section-card .card-method{
+  background-color: #2f4c4121;
+  color: #FFF;
+}
+.section-card .card-method .method-btn{
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  background-color: #0a4f7e;
+}
+.method-btn.one{
+  background-color: #FF9800 !important;
+}
+.method-btn.two{
+  background-color: #ae6837 !important;
+}
+.method-btn.tree{
+  background-color: #3f7792 !important;
+}
 /* Areas */
 .areas-carousel .owl-stage{
   margin: auto;
