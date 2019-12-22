@@ -537,6 +537,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   background-position: center center;
   background-attachment: fixed;
   position: relative;
+  margin-bottom: 2rem;
 }
 .section-card .section-container{
   position: relative;
@@ -566,6 +567,7 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
 .section-card .card-method{
   background-color: #2f4c4121;
   color: #FFF;
+  height: 100%;
 }
 .section-card .card-method .method-btn{
   padding: 1rem;
@@ -576,6 +578,28 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   margin-bottom: 1rem;
   font-size: 1.5rem;
   background-color: #0a4f7e;
+}
+.section-card .card-benefits{
+  background-color: #00000099;
+  color: #FFF;
+  height: 100%;
+}
+.section-card .card-benefits .title{
+  text-transform: uppercase;
+  font-size: 22px;
+  margin-top: 1rem;
+  position: relative;
+}
+.section-card .card-benefits .title:before{
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 14px;
+  left: 60px;
+  background: url("img/arrow.png") no-repeat;
 }
 .method-btn.one{
   background-color: #FF9800 !important;

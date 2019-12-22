@@ -16,6 +16,8 @@ get_header();
         $pageId = get_the_ID();
         $imageOne = get_post_meta($pageId,'section_one_background', true);
         $urlImageOne = wp_get_attachment_image_src( $imageOne, 'full' );
+        $imageTwo = get_post_meta($pageId,'section_two_background', true);
+        $urlImageTwo = wp_get_attachment_image_src( $imageTwo, 'full' );
         while ( have_posts() ) : the_post();
             get_template_part( 'template-parts/content', 'page' );
             if ( comments_open() || get_comments_number() ) :
@@ -29,10 +31,23 @@ get_header();
                 <h2 class="section-title">
                     <?php echo get_post_meta($pageId,'section_one_title', true); ?>
                 </h2>
-                <?php echo get_post_meta($pageId,'section_one_text', true); ?>
+                <div class="container">
+                    <?php echo get_post_meta($pageId,'section_one_text', true); ?>
+                </div>
             </div>
         </section>
 
+        <section id="benefits" class="section-card" style="background-image: url('<?php echo $urlImageTwo[0]; ?>')">
+            <div class="section-container">
+                <h2 class="section-title">
+                    <?php echo get_post_meta($pageId,'section_two_title', true); ?>
+                </h2>
+                <div class="container">
+                    <?php echo get_post_meta($pageId,'section_two_text', true); ?>
+                </div>
+
+            </div>
+        </section>
 
 
     </div>
