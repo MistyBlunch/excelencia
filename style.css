@@ -539,6 +539,15 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   position: relative;
   margin-bottom: 2rem;
 }
+.section-card-contact {
+  padding: 40px 0 40px;
+  background: no-repeat;
+  background-size: cover;
+  background-position: 0 center;
+  background-attachment: initial;
+  position: relative;
+  margin-bottom: 2rem;
+}
 .section-card .section-container{
   position: relative;
   z-index: 5;
@@ -551,12 +560,15 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   content: "";
   height: 100%;
   left: 0;
-  opacity: 0.6;
+  opacity: 0.8;
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 0;
   display: inherit !important;
+}
+.section-card-contact:before{
+  opacity: 0.2;
 }
 .section-card .section-title{
   text-align: center;
@@ -601,6 +613,21 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
   left: 60px;
   background: url("img/arrow.png") no-repeat;
 }
+.section-title-contact{
+  color: #952331;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+.section-card-contact{
+  margin-bottom: 0;
+}
+.contact-footer{
+  background: #000000;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding: 2rem;
+}
 .method-btn.one{
   background-color: #FF9800 !important;
 }
@@ -610,6 +637,24 @@ div.wpforms-container-full .wpforms-form button[type=submit]:hover{
 .method-btn.tree{
   background-color: #3f7792 !important;
 }
+.card-form .card-body{
+}
+.card-form .card-body .wpforms-title{
+  background-color: #952331;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.card-form div.wpforms-container-full .wpforms-form select.wpforms-field-medium{
+  max-width: 100%;
+}
+.card-form .wpforms-field.wpforms-field-checkbox{
+  text-align: left;
+}
+
 /* Areas */
 .areas-carousel .owl-stage{
   margin: auto;
