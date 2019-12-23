@@ -614,6 +614,81 @@ function shortcode_testimony($atts) {
 }
 add_shortcode( 'testimony_display', 'shortcode_testimony' );
 
+
+function page_corporative($pageId){
+    $imageOne = get_post_meta($pageId,'section_one_background', true);
+    $urlImageOne = wp_get_attachment_image_src( $imageOne, 'full' );
+    $imageTwo = get_post_meta($pageId,'section_two_background', true);
+    $urlImageTwo = wp_get_attachment_image_src( $imageTwo, 'full' );
+    $imageThree = get_post_meta($pageId,'section_three_background', true);
+    $urlImageThree = wp_get_attachment_image_src( $imageThree, 'full' );
+
+            ?>
+        <section id="methodology" class="section-card" style="background-image: url('<?php echo $urlImageOne[0]; ?>')">
+            <div class="section-container">
+                <h2 class="section-title">
+                    <?php echo get_post_meta($pageId,'section_one_title', true); ?>
+                </h2>
+                <div class="container">
+                    <?php echo get_post_meta($pageId,'section_one_text', true); ?>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="section-card" style="background-image: url('<?php echo $urlImageTwo[0]; ?>')">
+            <div class="section-container">
+                <h2 class="section-title">
+                    <?php echo get_post_meta($pageId,'section_two_title', true); ?>
+                </h2>
+                <div class="container">
+                    <?php echo get_post_meta($pageId,'section_two_text', true); ?>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-corporate" >
+            <h2 class="section-title-contact">
+                <?php echo get_post_meta($pageId,'section_three_title', true); ?>
+            </h2>
+            <div class="section-card section-card-contact" style="background-image: url('<?php echo $urlImageThree[0]; ?>')">
+                <div class="section-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="card card-form">
+                                    <div class="card-body">
+                                        <?php echo do_shortcode(get_post_meta($pageId,'section_three_text', true)); ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-footer">
+                        <?php echo get_post_meta($pageId,'section_footer_contact', true); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?php }
+
+function shortcode_page_corporative($atts){
+    $a = shortcode_atts( array(
+        'page' => 1545
+    ), $atts );
+    page_corporative($a['page']);
+}
+add_shortcode( 'corporative_display', 'shortcode_page_corporative' );
+
+
 function getAreas(){
     $args = array(
         'post_type' => 'area',
