@@ -126,17 +126,19 @@ $phones = getWathsapp();
         </div>
     </div>
 </div>
-
-<div class="wps-footer">
-    <?php if(get_theme_mod('cd_phone_contact')) : ?>
-    <a href="tel:<?php echo get_theme_mod('cd_phone_contact'); ?>" class="btn btn-primary btn-wathsapp" title="Número de teléfono">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/call-answer.svg" width="44px" height="44px" />
-    </a>
-    <?php endif; ?>
-    <button title="Wathsapp" type="button" class="btn btn-primary btn-wathsapp" data-toggle="modal" data-target="#modalWathsapp">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/whatsapp.svg" width="44px" height="44px" />
-    </button>
+<div class="interaction">
+    <div class="wps-footer">
+        <?php if(get_theme_mod('cd_phone_contact')) : ?>
+            <a href="tel:<?php echo get_theme_mod('cd_phone_contact'); ?>" class="btn btn-primary btn-wathsapp" title="Número de teléfono">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/call-answer.svg" width="44px" height="44px" />
+            </a>
+        <?php endif; ?>
+        <button title="Wathsapp" type="button" class="btn btn-primary btn-wathsapp" data-toggle="modal" data-target="#modalWathsapp">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/whatsapp.svg" width="44px" height="44px" />
+        </button>
+    </div>
 </div>
+
 
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

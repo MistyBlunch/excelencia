@@ -2263,6 +2263,9 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   border-top: 1px dotted #ddd;
   padding: 10px 0;
 }
+.interaction{
+  display: none;
+}
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
@@ -2328,9 +2331,14 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   #mobile-nav-toggle {
     display: inline;
   }
-
+  .interaction{
+    display: inline-block;
+  }
 }
 @media (max-width: 480px) {
+  .interaction{
+    display: inline-block;
+  }
   .section-card .card-benefits .title:before{
     left: 20px;
   }
