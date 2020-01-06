@@ -2347,7 +2347,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
     font-size: 1.35rem;
   }
   div.wpforms-container-full .wpforms-form .wpforms-title {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   div.wpforms-container-full .wpforms-form button[type=submit]{
     font-size: 1rem !important;
