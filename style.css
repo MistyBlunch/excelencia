@@ -2331,6 +2331,27 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 
 }
 @media (max-width: 480px) {
+  .section-card .card-benefits .title:before{
+    left: 20px;
+  }
+  .section-card .card-benefits .description{
+    font-size: 14px;
+  }
+  .section-card .section-title {
+    font-size: 22px;
+  }
+  .section-card .card-method .method-btn{
+    font-size: 1rem;
+  }
+  .section-title-contact{
+    font-size: 1.35rem;
+  }
+  div.wpforms-container-full .wpforms-form .wpforms-title {
+    font-size: 16px;
+  }
+  div.wpforms-container-full .wpforms-form button[type=submit]{
+    font-size: 1rem !important;
+  }
   .header {
     position: inherit;
   }
