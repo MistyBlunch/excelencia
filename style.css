@@ -1318,6 +1318,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   font-size: 12px !important;
+  color: #FFF;
 }
 #services .icon {
   float: left;
@@ -2493,7 +2494,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
   .box-notice .description p {
     font-size: 12px;
     line-height: 16px;
-    color: #9E9E9E;
+    color: #FFF;
   }
   .box-notice .description h2{
     font-size: 16px;
