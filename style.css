@@ -2267,6 +2267,64 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline{
 .interaction{
   display: none;
 }
+
+/*--------------------------------------------------------------
+# Formmulario en cursos
+--------------------------------------------------------------*/
+
+/* Formulario que se desplaza */
+.sticky-form {
+	position: sticky;
+	top: 160px;
+}
+
+/* Modificando contenedor de elementor */
+.elementor-section.elementor-section-boxed>.elementor-container {
+	max-width: 100% !important;
+}
+
+/* Formulario de Excenlecia */
+.excelencia_cursos_form {
+	padding-bottom: 1vw !important;
+}
+
+/* Estilos del header del form */
+.excelencia_cursos_form .wpforms-head-container {
+	background-color: #952331 !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	font-size: 15px !important;
+	padding: 12px 10px 8px 10px   !important;
+}
+
+.excelencia_cursos_form .wpforms-head-container .wpforms-description {
+	margin: 0 !important;
+}
+
+/* Estilos del cuerpo del form */
+.excelencia_cursos_form .wpforms-field-container {
+	padding: 10px !important;
+}
+
+/* Terminos y condiciones label */
+.excelencia_cursos_form .wpforms-field-label-inline {
+	color: #000 !important;
+}
+
+
+/* Estilos del boton enviar del form */
+div.wpforms-container-full .wpforms-form button[type=submit] {
+	background-color: #952331 !important;
+	border: none !important;
+	width: auto !important;
+	display: flex;
+	margin: auto;
+	font-size: 15px !important;
+}
+.granate_color {
+	background-color: #952331 !important;
+}
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
