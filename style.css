@@ -2293,6 +2293,43 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
   padding-bottom: 1vw !important;
 }
 
+/* Estilos del header del form */
+.excelencia_cursos_form .wpforms-head-container {
+  color: #fff !important;
+  font-weight: bold !important;
+  font-size: 15px !important;
+  padding: 12px 10px 8px 10px !important;
+}
+
+/* Header Gris */
+.excelencia_cursos_form.header_gris .wpforms-head-container {
+  background-color: #393b43 !important;
+}
+
+/* Header Granate */
+.excelencia_cursos_form.header_granate .wpforms-head-container {
+  background-color: #952331 !important;
+}
+
+/* Header Celeste */
+.excelencia_cursos_form.header_celeste .wpforms-head-container {
+  background-color: #4a7ab4 !important;
+}
+
+/* Header Morado */
+.excelencia_cursos_form.header_morado .wpforms-head-container {
+  background-color: #654460 !important;
+}
+
+.excelencia_cursos_form .wpforms-head-container .wpforms-description {
+  margin: 0 !important;
+}
+
+/* Estilos del cuerpo del form */
+.excelencia_cursos_form .wpforms-field-container {
+  padding: 10px !important;
+}
+
 /* Terminos y condiciones label */
 .excelencia_cursos_form .wpforms-field-label-inline {
   color: #000 !important;
@@ -2309,52 +2346,40 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
   font-size: 15px !important;
 }
 
-/* Granate */
+/* BTN Granate */
 .excelencia_cursos_form.wpforms-container-full
   .wpforms-form
-  button[type="submit"].granate_color {
-  background-color: #952331 !important;
-}
-
+  button[type="submit"].granate_color,
 .excelencia_cursos_form.wpforms-container-full
   .wpforms-form
   button[type="submit"].granate_color:hover {
   background-color: #952331 !important;
 }
 
-/* Gris */
+/* BTN Gris */
 .excelencia_cursos_form.wpforms-container-full
   .wpforms-form
-  button[type="submit"].gris_color {
-  background-color: #393b43 !important;
-}
-
+  button[type="submit"].gris_color,
 .excelencia_cursos_form.wpforms-container-full
   .wpforms-form
   button[type="submit"].gris_color:hover {
   background-color: #393b43 !important;
 }
 
-/* Celeste */
+/* BTN Celeste */
 .excelencia_cursos_form.wpforms-container-full
   .wpforms-form
-  button[type="submit"].celeste_color {
-  background-color: #4a7ab4 !important;
-}
-
+  button[type="submit"].celeste_color,
 .excelencia_cursos_form.wpforms-container-full
   .wpforms-form
   button[type="submit"].celeste_color:hover {
   background-color: #4a7ab4 !important;
 }
 
-/* Morado */
+/* BTN Morado */
 .excelencia_cursos_formu.wpforms-container-full
   .wpforms-form
-  button[type="submit"].morado_color {
-  background-color: #654460 !important;
-}
-
+  button[type="submit"].morado_color,
 .excelencia_cursos_formu.wpforms-container-full
   .wpforms-form
   button[type="submit"].morado_color:hover {
