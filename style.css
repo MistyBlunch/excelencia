@@ -2295,12 +2295,12 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
 
 /* Estilos del header del form */
 .excelencia_cursos_form .wpforms-head-container {
-  color: #fff !important;
-  font-weight: bold !important;
   padding: 12px 10px 8px 10px !important;
 }
 
 .excelencia_cursos_form .wpforms-head-container .wpforms-title {
+  color: #fff !important;
+  font-weight: bold !important;
   font-size: 16px !important;
   line-height: 20px;
   margin: 0;
