@@ -2373,7 +2373,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
 .excelencia_cursos_form.wpforms-container-full
   .wpforms-form
   button[type="submit"].black_text {
-    color: #000;
+    color: #000 !important;
   }
 
 /* BTN Granate */
