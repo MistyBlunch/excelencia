@@ -2322,7 +2322,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
 }
 
 .excelencia_cursos_form.black_text .wpforms-head-container .wpforms-title, .excelencia_cursos_form.black_text .wpforms-head-container .wpforms-description {
-	color: #000;
+	color: #000 !important
 }
 
 /* Header Gris */
@@ -2369,6 +2369,12 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
   margin: auto;
   font-size: 15px !important;
 }
+
+.excelencia_cursos_form.wpforms-container-full
+  .wpforms-form
+  button[type="submit"].black_text {
+    color: #000;
+  }
 
 /* BTN Granate */
 .excelencia_cursos_form.wpforms-container-full
