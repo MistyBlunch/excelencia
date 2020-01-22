@@ -2407,10 +2407,10 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
 }
 
 /* BTN Morado */
-.excelencia_cursos_formu.wpforms-container-full
+.excelencia_cursos_form.wpforms-container-full
   .wpforms-form
   button[type="submit"].morado_color,
-.excelencia_cursos_formu.wpforms-container-full
+.excelencia_cursos_form.wpforms-container-full
   .wpforms-form
   button[type="submit"].morado_color:hover {
   background-color: #654460 !important;
