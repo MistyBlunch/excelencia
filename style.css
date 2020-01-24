@@ -2279,7 +2279,7 @@ div.wpforms-container-full .wpforms-form .wpforms-field-label-inline {
 
 /* Formulario que se desplaza */
 .sticky-form {
-  position: sticky;
+  position: sticky !important;
   top: 160px;
 }
 
